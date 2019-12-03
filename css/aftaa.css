@@ -34,3 +34,10 @@ footer a:hover {
     background: #ff4b5f;
     border-radius: 1em;
 }
+
+#kuba-moscow {
+    padding: 3px;
+    color: #333;
+    background: yellow;
+    border-radius: 5px;
+}

@@ -1,5 +1,4 @@
 <?php
-
 require_once 'config/config.php';
 
 use builder\LinkBlockJsonBuilder;
@@ -19,7 +18,7 @@ $links = $storage->getAll(new LinkBlockJsonBuilder(new LinkPrivateStrategy));
 $view = new View('links-column', []);
 
 // top N
-$topLinks = $storage->getTopN(15);
+$topLinks = $storage->getTopN(23);
 
 $query = 'SELECT id, bank_name, card_no FROM bank_card ORDER BY sort';
 $cards = $dbh->query($query)->fetchAll(PDO::FETCH_ASSOC);
@@ -77,7 +76,7 @@ $isAdmin = $isAftaa;
         <?php if ($isAdmin): ?>
             <div class="col col-lg-2 col-sm-3">
                 <div class="alert-info"
-                     style="padding: 0 0 .5em 1em; border-radius: 1em;"><? $view->render(['block' => $topLinks]) ?></div>
+                     style="padding: 0 0 .5em 1em; border-radius: 1em;"><?php $view->render(['block' => $topLinks]) ?></div>
                 <br>
                 <a href="https://twitter.com/intent/tweet?button_hashtag=aftaa&ref_src=twsrc%5Etfw"
                    class="twitter-hashtag-button" data-show-count="false">Tweet #aftaa</a>
@@ -85,32 +84,45 @@ $isAdmin = $isAftaa;
             </div>
         <?php endif ?>
         <div class="col col-lg-2 col-sm-3">
-            <? $view->render(['block' => $links['where I live']]) ?>
-            <? $view->render(['block' => $links['social networks']]) ?>
+            <?php $view->render(['block' => $links['where I live']]) ?>
+            <?php $view->render(['block' => $links['social networks']]) ?>
+            <?php if ($isAftaa): ?>
+                <?php $view->render(['block' => $links['my']]) ?>
+
+                <div>
+                    <br>
+                    <div style="overflow:hidden;">
+                        <input type="text" value="128.0.142.30" id="ip" onclick="this.select()"
+                               style="color: #a163f5; font-size: 15px; width: 100px; border-color: #a163f5; text-align: center; border-width: 1px; border-radius: 5px;">
+                        <!--                        <img alt="copy IP to clipboard" src="/image/copy.svg" width="24" height="24" id="copy"-->
+                        <!--                             style="display: inline; float: left;">-->
+                    </div>
+                </div>
+            <?php endif ?>
         </div>
         <div class="col col-lg-2 col-sm-3">
-            <? $view->render(['block' => $links['music &amp; mixes']]) ?>
-            <? $view->render(['block' => $links['ICQ']]) ?>
-            <? $view->render(['block' => $links['Skype']]) ?>
-            <? $view->render(['block' => $links['telegram']]) ?>
+            <?php $view->render(['block' => $links['music &amp; mixes']]) ?>
+            <?php $view->render(['block' => $links['ICQ']]) ?>
+            <?php $view->render(['block' => $links['Skype']]) ?>
+            <?php $view->render(['block' => $links['telegram']]) ?>
             <?php if ($isAftaa): ?>
-                <? $view->render(['block' => $links['routers']]) ?>
+                <?php $view->render(['block' => $links['routers']]) ?>
             <?php endif ?>
         </div>
         <?php if ($isAftaa): ?>
             <div class="col col-lg-2 col-sm-3">
-                <? $view->render(['block' => $links['finance']]) ?>
-                <? $view->render(['block' => $links['lk']]) ?>
+                <?php $view->render(['block' => $links['finance']]) ?>
+                <?php $view->render(['block' => $links['lk']]) ?>
             </div>
             <div class="col col-lg-2 col-sm-3">
-                <? $view->render(['block' => $links['yandex']]) ?>
-                <? $view->render(['block' => $links['google']]) ?>
+                <?php $view->render(['block' => $links['yandex']]) ?>
+                <?php $view->render(['block' => $links['google']]) ?>
             </div>
 
             <div class="col col-lg-2 col-sm-3">
-                <? $view->render(['block' => $links['projects']]) ?>
-                <? $view->render(['block' => $links['shopping']]) ?>
-                <? $view->render(['block' => $links['other']]) ?>
+                <?php $view->render(['block' => $links['projects']]) ?>
+                <?php $view->render(['block' => $links['shopping']]) ?>
+                <?php $view->render(['block' => $links['other']]) ?>
             </div>
         <?php endif ?>
     </div>
@@ -127,7 +139,8 @@ $isAdmin = $isAftaa;
 </main>
 <footer class="navbar fixed-bottom">
     <div id="c">&copy; 1983&ndash;<?= date('Y') ?>
-        <a href="mailto:aftaa@aftaa.ru">aftaa</a>
+        <a href="mailto:after@aftaa.ru">after</a>
+        сделал в <a href="http://kuba.moscow/" target="_blank" id="kuba-moscow">kuba.moscow</a>
     </div>
 </footer>
 <?php require_once 'yandex.metrika.html' ?>

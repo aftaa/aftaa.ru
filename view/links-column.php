@@ -7,11 +7,17 @@ use helper\Visitor;
 
 $isAftaa = Visitor::isAftaa();
 $isAdmin = $isAftaa;
+?>
 
-
-if ($block->getCount()): ?>
+<?php if ($block->getCount()): ?>
     <h3 class="mt-3"><?= $block->getName() ?></h3>
     <?php foreach ($block->getLinks() as $link): ?>
+
+        <?php
+            if ($link->isPrivate() && !$isAftaa) {
+                continue;
+            }
+        ?>
 
         <div style="white-space: nowrap;" class="mb-1">
             <?php if ($icon = $link->getIcon()): ?>
@@ -29,7 +35,6 @@ if ($block->getCount()): ?>
                     </small>
                 </sup>
             <?php endif ?>
-
         </div>
-    <? endforeach ?>
+    <?php endforeach ?>
 <?php endif ?>

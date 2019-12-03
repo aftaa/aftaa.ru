@@ -12,14 +12,8 @@ class Visitor
 {
     const GET_KEY = 'aftaa';
     const MY_IPS = [
-        '128.0.142.30',
-		'51.158.124.216', // FR
-        // '95.165.213.226', //softmg
-        // '37.228.89.179',  //softmg
-//        '127.0.0.1',
-//        '77.120.106.94',
-//        '212.224.118.16', //Germany VPN
-//        '51.158.124.216', //Fornex VPN
+        '127.0.0.1',
+        '192.168.1.2',
     ];
 
     /**
@@ -29,6 +23,9 @@ class Visitor
     {
         $isAftaa = !empty($_REQUEST[self::GET_KEY]);
         $isAftaa = $isAftaa && self::checkIPs();
+        if ('127.0.0.1' == $_SERVER['REMOTE_ADDR']) {
+            $isAftaa = true;
+        }
         return $isAftaa;
     }
 

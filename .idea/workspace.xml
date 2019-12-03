@@ -1,8 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/max.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicons/after.aftaa.ru.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicons/after.aftaa.ru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicons/connect.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicons/kuba.moscow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicons/kuba.msk.ru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicons/lj.aftaa.ru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicons/vseti-goroda.aftaa.ru.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicons/vseti-goroda.aftaa.ru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/copy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/missing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yandex_9cd32cc7c11a9f50.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/aftaa.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/aftaa.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/Visitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/helper/Visitor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/aftaa.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/aftaa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/acid-disco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/bk30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/bk31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/bk34-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/bk34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/delaynomore.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/hkp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/hkpp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/lemonslayer1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/lemonslayer2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/level_2008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/lineup-bd-back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/lineup-bd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/mad_tea_party.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/music-lovers_back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/music-lovers_front.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/musiclovers2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/night4cats.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/pirates.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/prostowato.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/sphinx-bd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/systo2010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/tentoparty23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/tt-600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/umatik-patik-2-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/umatik-patik-2-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/wato.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/wato6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/flyers/watonomore.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/192140_nikogda.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/1991_CPA_6370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/503.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/Vadimka_5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/arbuz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/balka.gif.ban.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/bkshniki.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/browsers.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/crzr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/desktop.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/ketchup.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/ketchup1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lenta-eurovision.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/bk/djatwork.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/bk/meatmarket.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/buhau.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/eto-pravda.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/how-to-draw-an-owl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/ololo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/sova.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/spamj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/stalin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/lol/vpustil-kota.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/mail.ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/medved.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/ml-1200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/myt-posudu-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/myt-posudu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/ololo/contex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/popcorn-n-cola-small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/popcorn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/prevrotit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/shishkin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/thebat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/torrent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/trigun.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/images/yandex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/index.html.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/alla-mihalovna.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/balafi2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/hard-ugar.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/hellowin.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/heruin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/hue-moe.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/krolik.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/midi/dreams.MID" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/midi/frekkl.MID" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/mix.txt.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/oda.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/privet/knopka_5.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/privet/part1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/privet/part2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/privet/part3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/room.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/tasya.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/vsk-tsk.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/mp3/vtorneg.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/51007_900x600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/CRW_8807.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/acid-disco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/april.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/bk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/buzova/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/buzova/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/bydlo-mobilo-ofis.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/bydlo-mobilo-ya.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/coffee/blablabla.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/coffee/quesito.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/du-buzz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/mosgorshrutka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/ne-zharko.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/passport.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/popa-di.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/SG1L2963.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/SG1L2964.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/SG1L2966.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/SG1L2979.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/alkostuff.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/P1030595.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/P1030598.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/P1030599.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/P1030607.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/P1030608.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/P1030611.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/P1030612.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/P1030615.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/small/P1030595.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/small/P1030598.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/small/P1030599.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/small/P1030607.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/small/P1030608.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/small/P1030611.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/small/P1030612.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/party-place/small/P1030615.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/soj-ny/result.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/tigriki.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/x_1c673acf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/zaets-bd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/photos/zolboch.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/pics/beeline.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/pics/kadaffy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lj/pics/super.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/links-column.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/links-column.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,30 +170,94 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="after_aftaa@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="after_aftaa@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="after_aftaa@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="after_aftaa: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1TdplmkuHKbmNvbHAQ7qbFrf1Px" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/favicons" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/favicons" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -50,11 +271,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573799980123</updated>
-      <workItem from="1573799988295" duration="2476000" />
+      <workItem from="1573799988295" duration="6651000" />
+      <workItem from="1573812270463" duration="642000" />
+      <workItem from="1573948987132" duration="191000" />
+      <workItem from="1573949787963" duration="359000" />
+      <workItem from="1574258750950" duration="39000" />
+      <workItem from="1574410033415" duration="598000" />
+      <workItem from="1574686474493" duration="11639000" />
+      <workItem from="1574957981525" duration="553000" />
+      <workItem from="1574959964143" duration="19000" />
+      <workItem from="1574960018894" duration="624000" />
+      <workItem from="1575311288852" duration="1947000" />
+      <workItem from="1575380267423" duration="2039000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="782" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1575380348564">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="782" y="479" width="399" height="156" key="NewPhpFileDialog/54.27.1866.1053/1920.74.1440.900@54.27.1866.1053" timestamp="1575380348564" />
   </component>
 </project>
