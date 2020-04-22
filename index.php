@@ -61,7 +61,7 @@ $isAdmin = $isAftaa;
 <body>
 <main class="container">
 
-    <?php if ($isAdmin): ?>
+    <?php if (false && $isAdmin): ?>
         <div class="row" id="card_banks">
             <?php foreach ($cards as $card): ?>
                 <div class="cell col-sm-4 text-center" id="card_bank_<?= $card['id'] ?>">
