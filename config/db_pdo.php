@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dsn'      => 'mysql:dbname=after_aftaa',
-    'user'     => 'after_aftaa',
-    'password' => 'a8JTCCM9',
+    'dsn'      => 'mysql:dbname=aftaa_ru',
+    'user'     => 'aftaa_ru',
+    'password' => 'aftaa_ru',
 ];
