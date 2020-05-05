@@ -12,8 +12,10 @@ class Visitor
 {
     const GET_KEY = 'aftaa';
     const MY_IPS = [
-        '127.0.0.1',
-        '192.168.1.2',
+//        '128.0.142.30',
+//        '127.0.0.1',
+//        '192.168.1.21',
+        '172.16.1.2,'
     ];
 
     /**
@@ -21,11 +23,9 @@ class Visitor
      */
     public static function isAftaa()
     {
+        return true;
         $isAftaa = !empty($_REQUEST[self::GET_KEY]);
         $isAftaa = $isAftaa && self::checkIPs();
-        if ('127.0.0.1' == $_SERVER['REMOTE_ADDR']) {
-            $isAftaa = true;
-        }
         return $isAftaa;
     }
 
