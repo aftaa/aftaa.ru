@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/Visitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/helper/Visitor.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,8 @@
       <workItem from="1587569607127" duration="1880000" />
       <workItem from="1587587006389" duration="1799000" />
       <workItem from="1587642968486" duration="208000" />
-      <workItem from="1588719760044" duration="548000" />
+      <workItem from="1588719760044" duration="1498000" />
+      <workItem from="1588756212762" duration="224000" />
     </task>
     <servers />
   </component>
@@ -129,9 +131,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="602" y="205" width="832" height="711" key="#SSH_Configurations" timestamp="1588721582850">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="602" y="205" width="832" height="711" key="#SSH_Configurations/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588721582850" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1588720072214">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588720072214" />
+    <state x="925" y="270" width="187" height="580" key="ftp.server.browser" timestamp="1588721620400">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="925" y="270" width="187" height="580" key="ftp.server.browser/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588721620400" />
   </component>
 </project>
