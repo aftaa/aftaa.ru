@@ -18,11 +18,33 @@ class Visitor
         '172.16.1.2,'
     ];
 
+    const LOGIN = 'root';
+    const PASSWORD = 'gabi';
+
+    public static function basicAuth()
+    {
+        if (!empty($_SERVER['AUTH_TYPE'])) {
+            if ('Basic' == $_SERVER['AUTH_TYPE']) {
+                $login = $_SERVER['PHP_AUTH_USER'];
+                $password = $_SERVER['PHP_AUTH_PW'];
+
+                if (self::LOGIN == $login && self::PASSWORD == $password) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     /**
      * @return bool
      */
     public static function isAftaa()
     {
+        if (self::basicAuth()) {
+            return true;
+        }
+
         $isAftaa = !empty($_REQUEST[self::GET_KEY]);
         $isAftaa = $isAftaa && self::checkIPs();
         return $isAftaa;
