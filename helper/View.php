@@ -21,7 +21,7 @@ class View
      * @param array|null $vars
      * @throws Exception
      */
-    public function __construct(string $path, ?array $vars)
+    public function __construct(string $path, array $vars)
     {
         $this->setPath($path);
         $this->vars = $vars ?? [];

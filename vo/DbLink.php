@@ -25,7 +25,7 @@ class DbLink extends Link
      * @param IFavicon $icon
      * @param $id
      */
-    public function __construct(string $name, string $href, ?bool $private, IFavicon $icon, $id)
+    public function __construct(string $name, string $href, bool $private, IFavicon $icon, $id)
     {
         parent::__construct($name, $href, $private, $icon);
         $this->id = $id;

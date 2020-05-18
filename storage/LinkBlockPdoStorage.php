@@ -18,7 +18,7 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
     /**
      * @param \PDO $dbh
      */
-    public function setDbh(\PDO $dbh): void
+    public function setDbh(\PDO $dbh)
     {
         $this->dbh = $dbh;
     }
@@ -79,7 +79,7 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
                 $row->href,
                 $row->private,
                 new LoadedFavicon($row->name, $icon->getHref()),
-                $row->link_id,
+                $row->link_id
                 );
             $blocks[$blockName]->addLink($link);
         }

@@ -29,7 +29,7 @@ class Link implements LinkInterface
      * @param bool|null $private
      * @param IFavicon $icon
      */
-    public function __construct(string $name, string $href, ?bool $private, IFavicon $icon)
+    public function __construct(string $name, string $href, bool $private, IFavicon $icon)
     {
         $this->name = $name;
         $this->href = $href;
@@ -64,7 +64,7 @@ class Link implements LinkInterface
     /**
      * @return IFavicon|null
      */
-    public function getIcon(): ?IFavicon
+    public function getIcon(): IFavicon
     {
         return $this->icon;
     }

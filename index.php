@@ -8,26 +8,32 @@ use helper\Visitor;
 use storage\LinkBlockPdoStorage;
 use strategy\LinkPrivateStrategy;
 
-$dbConfig = include('config/db_pdo.php');
-$dbh = new PDO($dbConfig['dsn'], $dbConfig['user'], $dbConfig['password']);
-$dbh->query('SET NAMES UTF8');
 
-$storage = new LinkBlockPdoStorage();
-$storage->setDbh($dbh);
-
-$links = $storage->getAll(new LinkBlockJsonBuilder(new LinkPrivateStrategy));
-$view = new View('links-column', []);
-
-// top N
-$topLinks = $storage->getTopN(23);
-
-$query = 'SELECT id, bank_name, card_no FROM bank_card ORDER BY sort';
-$cards = $dbh->query($query)->fetchAll(PDO::FETCH_ASSOC);
-
-$isAftaa = Visitor::isAftaa();
-$isAdmin = $isAftaa;
-
-?>
+try {
+    $dbConfig = include('config/db_pdo.php');
+    $dbh = new PDO($dbConfig['dsn'], $dbConfig['user'], $dbConfig['password'], [
+        PDO::ATTR_PERSISTENT => true,
+    ]);
+    $dbh->query('SET NAMES UTF8');
+    $storage = new LinkBlockPdoStorage();
+    $storage->setDbh($dbh);
+    $links = $storage->getAll(new LinkBlockJsonBuilder(new LinkPrivateStrategy));
+    $view = new View('links-column', []);// top N
+    $topLinks = $storage->getTopN(23);
+    $query = 'SELECT id, bank_name, card_no FROM bank_card ORDER BY sort';
+    $cards = $dbh->query($query)->fetchAll(PDO::FETCH_ASSOC);
+    $isAftaa = Visitor::isAftaa();
+    $isAdmin = $isAftaa;
+} catch (Exception $e) {
+    ?>
+    <h1>Exception <?php $e->getCode() ?></h1>
+    <h2><?= $e->getMessage() ?></h2>
+    <h3>File: <?= $e->getMessage() ?></h3>
+    <h3>Line: <?= $e->getLine() ?></h3>
+    <h4>Trace:</h4>
+    <pre><?php print_r($e->getTrace()) ?></pre>
+    <?php exit;
+} ?>
 
 <!DOCTYPE html>
 <html lang="ru">

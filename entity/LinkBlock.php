@@ -19,7 +19,7 @@ class LinkBlock
      * @param string $name
      * @param LinkInterface[]|null $links
      */
-    public function __construct(string $name, ?array $links)
+    public function __construct(string $name, $links)
     {
         $this->name = $name;
         if (null !== $links) {
@@ -31,7 +31,7 @@ class LinkBlock
     /**
      * @param LinkInterface $link
      */
-    public function addLink(LinkInterface $link): void
+    public function addLink(LinkInterface $link)
     {
         $this->links[$link->getName()] = $link;
 //        echo '<pre>'; print_r($this->links[$link->getName()]); echo '</pre>'; die;
