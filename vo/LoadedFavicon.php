@@ -49,4 +49,23 @@ class LoadedFavicon implements IFavicon
         return $this->getHref();
     }
 
+    /**
+     * @param string $name
+     * @return LoadedFavicon
+     */
+    public function setName(string $name): LoadedFavicon
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @param string $src
+     * @return LoadedFavicon
+     */
+    public function setSrc(string $src): LoadedFavicon
+    {
+        $this->src = $src;
+        return $this;
+    }
 }

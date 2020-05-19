@@ -20,9 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builder/IndexPageBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entity/IndexPage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migration/alter_link_block.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/max.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/max.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/LinkBlock.php" beforeDir="false" afterPath="$PROJECT_DIR$/entity/LinkBlock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/LinkView.php" beforeDir="false" afterPath="$PROJECT_DIR$/entity/LinkView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vo/LoadedFavicon.php" beforeDir="false" afterPath="$PROJECT_DIR$/vo/LoadedFavicon.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +74,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/favicons" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -68,7 +82,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -123,33 +137,75 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="270" y="406" width="1370" height="302" key="#SQL_Dialects" timestamp="1589908961742">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="270" y="406" width="1370" height="302" key="#SQL_Dialects/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589908961742" />
     <state x="602" y="205" width="832" height="711" key="#SSH_Configurations" timestamp="1588721582850">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="602" y="205" width="832" height="711" key="#SSH_Configurations/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588721582850" />
-    <state x="2198" y="156" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589841103197">
+    <state x="2198" y="156" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589908511291">
       <screen x="1920" y="60" width="1440" height="900" />
     </state>
-    <state x="2198" y="156" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589841103197" />
-    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1588771507110">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771507110" />
-    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1588771975989">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771975989" />
-    <state x="836" y="399" width="237" height="316" key="cloudConfig.SelfSettingsDialog" timestamp="1589837743159">
+    <state x="2198" y="156" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589908511291" />
+    <state x="768" y="272" width="435" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1589909177214">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="836" y="399" width="237" height="316" key="cloudConfig.SelfSettingsDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589837743159" />
+    <state x="768" y="272" width="435" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589909177214" />
+    <state x="693" y="301" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589916788801">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="693" y="301" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589916788801" />
+    <state x="70" y="129" width="1720" height="853" key="DiffContextDialog" timestamp="1589919313245">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="70" y="129" width="1720" height="853" key="DiffContextDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589919313245" />
+    <state width="1289" height="274" key="GridCell.Tab.0.bottom" timestamp="1589913195026">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1289" height="274" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589913195026" />
+    <state width="1289" height="274" key="GridCell.Tab.0.center" timestamp="1589913195026">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1289" height="274" key="GridCell.Tab.0.center/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589913195026" />
+    <state width="1289" height="274" key="GridCell.Tab.0.left" timestamp="1589913195025">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1289" height="274" key="GridCell.Tab.0.left/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589913195025" />
+    <state width="1289" height="274" key="GridCell.Tab.0.right" timestamp="1589913195026">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1289" height="274" key="GridCell.Tab.0.right/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589913195026" />
+    <state x="760" y="264" width="400" height="585" key="NewPhpClassDialog" timestamp="1589911612191">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="760" y="264" width="400" height="585" key="NewPhpClassDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589911612191" />
+    <state x="747" y="479" width="415" height="160" key="NewPhpFileDialog" timestamp="1589906501478">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="747" y="479" width="415" height="160" key="NewPhpFileDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589906501478" />
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771507110" />
+    <state x="429" y="188" width="1007" height="737" key="SettingsEditor" timestamp="1589915753955">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="429" y="188" width="1007" height="737" key="SettingsEditor/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589915753955" />
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771975989" />
+    <state x="696" y="399" width="518" height="316" key="cloudConfig.PluginsDialog" timestamp="1589917350935">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="696" y="399" width="518" height="316" key="cloudConfig.PluginsDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589917350935" />
+    <state x="836" y="399" width="247" height="316" key="cloudConfig.SelfSettingsDialog" timestamp="1589917329849">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="836" y="399" width="247" height="316" key="cloudConfig.SelfSettingsDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589917329849" />
     <state x="925" y="270" width="187" height="580" key="ftp.server.browser" timestamp="1588721620400">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="925" y="270" width="187" height="580" key="ftp.server.browser/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588721620400" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1589837870187">
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1589906414892">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589837870187" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589906414892" />
   </component>
 </project>

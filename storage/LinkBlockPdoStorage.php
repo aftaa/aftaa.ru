@@ -80,11 +80,9 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
                 $row->private,
                 new LoadedFavicon($row->name, $icon->getHref()),
                 $row->link_id
-                );
+            );
             $blocks[$blockName]->addLink($link);
         }
         return $blocks;
     }
 }
-
-

@@ -7,7 +7,6 @@ use vo\LinkInterface;
 
 class LinkBlock
 {
-    /** @var string */
     private $name = '';
 
     /** @var LinkInterface[] */
@@ -19,7 +18,7 @@ class LinkBlock
      * @param string $name
      * @param LinkInterface[]|null $links
      */
-    public function __construct(string $name, $links)
+    public function __construct(string $name, $links = null)
     {
         $this->name = $name;
         if (null !== $links) {
@@ -34,7 +33,6 @@ class LinkBlock
     public function addLink(LinkInterface $link)
     {
         $this->links[$link->getName()] = $link;
-//        echo '<pre>'; print_r($this->links[$link->getName()]); echo '</pre>'; die;
     }
 
     /**
@@ -50,8 +48,7 @@ class LinkBlock
      */
     public function getLinks(): array
     {
-        $links = $this->ksort();
-        return $links;
+        return $this->ksort();
     }
 
     /**

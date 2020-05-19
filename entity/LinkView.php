@@ -4,25 +4,30 @@
 namespace entity;
 
 
+use DateTime;
+
 class LinkView
 {
     /** @var int */
-    private $id;
+    private int $id;
+
     /** @var int */
-    private $link_id;
-    /** @var \DateTime */
-    private $date_time;
+    private int $link_id;
+
+    /** @var DateTime */
+    private DateTime $date_time;
+
     /** @var int */
-    private $ip4;
+    private int $ip4;
 
     /**
      * LinkView constructor.
      * @param int $id
      * @param int $link_id
-     * @param \DateTime $date_time
+     * @param DateTime $date_time
      * @param int $ip4
      */
-    public function __construct(int $id, int $link_id, \DateTime $date_time, int $ip4)
+    public function __construct(int $id, int $link_id, DateTime $date_time, int $ip4)
     {
         $this->id = $id;
         $this->link_id = $link_id;
@@ -63,17 +68,17 @@ class LinkView
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getDateTime(): \DateTime
+    public function getDateTime(): DateTime
     {
         return $this->date_time;
     }
 
     /**
-     * @param \DateTime $date_time
+     * @param DateTime $date_time
      */
-    public function setDateTime(\DateTime $date_time): void
+    public function setDateTime(DateTime $date_time): void
     {
         $this->date_time = $date_time;
     }
@@ -93,6 +98,4 @@ class LinkView
     {
         $this->ip4 = $ip4;
     }
-
-
 }
