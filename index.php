@@ -24,6 +24,9 @@ try {
     $cards = $dbh->query($query)->fetchAll(PDO::FETCH_ASSOC);
     $isAftaa = Visitor::isAftaa();
     $isAdmin = $isAftaa;
+
+    $vueData = json_encode($links);
+
 } catch (Exception $e) {
     ?>
     <h1>Exception <?php $e->getCode() ?></h1>
@@ -61,35 +64,25 @@ try {
     <script src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"></script>
+    <script src="/js/vue.js"></script>
+
     <link rel="stylesheet" href="/css/aftaa.css">
     <script type="text/javascript" src="/js/aftaa.js"></script>
+    <script type="text/javascript" src="/js/vm.js"></script>
     <title>Hello, aftaa!</title>
 </head>
 <body>
-<main class="container">
-
-    <?php if (false && $isAdmin): ?>
-        <div class="row" id="card_banks">
-            <?php foreach ($cards as $card): ?>
-                <div class="cell col-sm-4 text-center" id="card_bank_<?= $card['id'] ?>">
-                    <div><?= $card['bank_name'] ?></div>
-                    <div><?= $card['card_no'] ?></div>
-                </div>
-            <?php endforeach ?>
-        </div>
-    <?php endif ?>
-
+<main class="container" id="app">
     <div class="row">
-        <?php if ($isAdmin): ?>
-            <div class="col col-lg-2 col-sm-3">
-                <div class="alert-info"
-                     style="padding: 0 0 .5em 1em; border-radius: 1em;"><?php $view->render(['block' => $topLinks]) ?></div>
-                <br>
-                <a href="https://twitter.com/intent/tweet?button_hashtag=aftaa&ref_src=twsrc%5Etfw"
-                   class="twitter-hashtag-button" data-show-count="false">Tweet #aftaa</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-        <?php endif ?>
+        <div class="col col-lg-2 col-sm-3" v-if="seen">
+            <div class="alert-info"
+                 style="padding: 0 0 .5em 1em; border-radius: 1em;"><?php $view->render(['block' => $topLinks]) ?></div>
+            <br>
+            <a href="https://twitter.com/intent/tweet?button_hashtag=aftaa&ref_src=twsrc%5Etfw"
+               class="twitter-hashtag-button" data-show-count="false">Tweet #aftaa</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
         <div class="col col-lg-2 col-sm-3">
             <?php $view->render(['block' => $links['where I live']]) ?>
             <?php $view->render(['block' => $links['social networks']]) ?>
@@ -101,8 +94,6 @@ try {
                     <div style="overflow:hidden;">
                         <input type="text" value="128.0.142.30" id="ip" onclick="this.select()"
                                style="color: #a163f5; font-size: 15px; width: 100px; border-color: #a163f5; text-align: center; border-width: 1px; border-radius: 5px;">
-                        <!--                        <img alt="copy IP to clipboard" src="/image/copy.svg" width="24" height="24" id="copy"-->
-                        <!--                             style="display: inline; float: left;">-->
                     </div>
                 </div>
             <?php endif ?>

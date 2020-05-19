@@ -20,17 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db_pdo.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_pdo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/LinkBlock.php" beforeDir="false" afterPath="$PROJECT_DIR$/entity/LinkBlock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/IconFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/factory/IconFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/helper/View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo/DbLink.php" beforeDir="false" afterPath="$PROJECT_DIR$/vo/DbLink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo/Link.php" beforeDir="false" afterPath="$PROJECT_DIR$/vo/Link.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
