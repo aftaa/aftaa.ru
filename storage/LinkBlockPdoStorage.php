@@ -59,8 +59,9 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
     {
         $dbh = $this->dbh;
 
-        $result = $dbh->query("SELECT *, l.name AS name, b.name AS block_name, l.id AS link_id 
-            FROM link l JOIN link_block b ON link_block_id=b.id ORDER BY l.name", PDO::FETCH_OBJ);
+        $result = $dbh->query("SELECT *, l.name AS name, b.name AS block_name, 
+            l.id AS link_id
+            FROM link l JOIN link_block b ON link_block_id=b.id ORDER BY b.sort, l.name", PDO::FETCH_OBJ);
 
         /** @var LinkBlockDb[] $blocks */
         $blocks = [];
@@ -69,7 +70,7 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
             $blockName = $row->block_name;
 
             if (!array_key_exists($blockName, $blocks)) {
-                $blocks[$blockName] = new LinkBlockDb($blockName, null);
+                $blocks[$blockName] = new LinkBlockDb($blockName, $row->col_num,  null);
             }
 
             $icon = IconFactory::getIcon($row->icon, $row->href);
@@ -84,5 +85,22 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
             $blocks[$blockName]->addLink($link);
         }
         return $blocks;
+    }
+
+    /**
+     * @param LinkBlockDb[] $blocks
+     */
+    public function getAllByColNum(array $blocks)
+    {
+        $columns = [];
+
+        foreach ($blocks as $block) {
+            if (!isset($columns[$block->colNum])) {
+                $columns[$block->colNum] = [];
+            }
+            $columns[$block->colNum][] = $block;
+        }
+//echo "<pre>"; print_r($columns); echo "</pre>"; die;
+        return $columns;
     }
 }

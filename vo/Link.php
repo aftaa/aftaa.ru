@@ -11,16 +11,16 @@ namespace vo;
 class Link implements LinkInterface
 {
     /** @var string */
-    private $name = '';
+    public $name = '';
 
     /** @var string */
-    private $href = '';
+    public $href = '';
 
     /** @var bool */
-    private $private = false;
+    public $private = false;
 
     /** @var Icon */
-    private $icon;
+    public $icon;
 
     /**
      * Link constructor.
@@ -34,7 +34,7 @@ class Link implements LinkInterface
         $this->name = $name;
         $this->href = $href;
         $this->private = $private ?? $private;
-        $this->icon = $icon ?? $icon;
+        $this->icon = $icon->getHref();
     }
 
     /**

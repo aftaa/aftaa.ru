@@ -17,15 +17,13 @@ class IndexPage
     /** @var array */
     public $creditCards = [];
 
-    /**use builder\IndexPageBuilder;
-
-
+    /**
      * IndexPage constructor.
-     * @param string $title
-     * @param array|LinkBlockDb[] $sections
+     * @param $title
+     * @param $sections
      * @param array $creditCards
      */
-    public function __construct(string $title, $sections, array $creditCards)
+    public function __construct($title, $sections, array $creditCards)
     {
         $this->title = $title;
         $this->sections = $sections;

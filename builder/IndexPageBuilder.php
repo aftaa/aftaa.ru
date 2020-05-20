@@ -34,8 +34,9 @@ class IndexPageBuilder
     {
         $storage = new LinkBlockPdoStorage();
         $storage->setDbh($this->pdo);
-        $links = $storage->getAll(new LinkBlockJsonBuilder(new LinkPrivateStrategy));
-        return new IndexPage('Hello, aftaa!', $links, []);
+        $blocks = $storage->getAll(new LinkBlockJsonBuilder(new LinkPrivateStrategy));
+        $blocksByColumn = $storage->getAllByColNum($blocks);
+        return new IndexPage('Hello, aftaa!', $blocksByColumn, []);
 
 
 //        $view = new View('links-column', []);// top N
