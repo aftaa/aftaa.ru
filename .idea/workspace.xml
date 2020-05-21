@@ -20,31 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/twitter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/max.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/max.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builder/IndexPageBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/builder/IndexPageBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/IndexPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/entity/IndexPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/LinkBlock.php" beforeDir="false" afterPath="$PROJECT_DIR$/entity/LinkBlock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vue-2.6.11.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/missing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanner/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ping.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tdk/css/tdk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tdk/image/excel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tdk/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tdk/js/tdk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tdk/main.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tdk/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/top_query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migration/top_query.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vg-test/index.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo/Icon.php" beforeDir="false" afterPath="$PROJECT_DIR$/vo/Icon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo/Link.php" beforeDir="false" afterPath="$PROJECT_DIR$/vo/Link.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yandex.metrika.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/yandex.metrika.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +112,7 @@
       <workItem from="1589831515006" duration="5417000" />
       <workItem from="1589927279478" duration="15336000" />
       <workItem from="1589976010906" duration="624000" />
-      <workItem from="1589979763738" duration="2758000" />
+      <workItem from="1589979763738" duration="6254000" />
     </task>
     <servers />
   </component>

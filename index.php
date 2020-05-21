@@ -7,7 +7,6 @@ use entity\IndexPage;
 
 /** @var IndexPage $thisPage */
 $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
-//echo "<pre>"; print_r($thisPage->getSectionAsJson()); echo "</pre>";
 
 ?><!DOCTYPE html>
 <html lang="ru">
@@ -19,7 +18,7 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 <!--    <link rel="stylesheet" href="css/bootstrap-grid.min.css">-->
 <!--    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">-->
     <link rel="stylesheet" href="css/aftaa.css">
-<!--    <script src="js/jquery-3.5.1.min.js"></script>-->
+    <script src="js/jquery-3.5.1.min.js"></script>
 <!--    <script src="js/bootstrap.min.js"></script>-->
 <!--    <script src="js/bootstrap.bundle.min.js"></script>-->
     <script src="js/vue-2.6.11.js"></script>
@@ -47,7 +46,9 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 
 <script src="js/vm.js"></script>
 <script>
-    vm.hrefs = <?= $thisPage->getSectionAsJson() ?>;
+    $.get('api', function (data) {
+        vm.hrefs = data;
+    });
 </script>
 
 <footer class="navbar fixed-bottom">
