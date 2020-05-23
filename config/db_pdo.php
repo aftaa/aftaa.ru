@@ -1,7 +1,10 @@
 <?php
 
 return [
-    'dsn'      => 'mysql:host=127.0.0.1;dbname=aftaa_ru',
+    'dsn'      => 'mysql:host=localhost;dbname=aftaa_ru',
     'user'     => 'aftaa_ru',
-    'password' => 'darkside423',
+    'password' => 'aftaa_ru',
+    'options'  => [
+
+    ],
 ];

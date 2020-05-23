@@ -60,8 +60,10 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
         $dbh = $this->dbh;
 
         $result = $dbh->query("SELECT *, l.name AS name, b.name AS block_name, 
-            l.id AS link_id, l.private AS link_private, b.private AS section_private 
-            FROM link l JOIN link_block b ON link_block_id=b.id ORDER BY b.sort, l.name", PDO::FETCH_OBJ);
+            l.id AS link_id 
+            FROM link l JOIN link_block b ON link_block_id=b.id
+            WHERE l.private=FALSE AND l.deleted=FALSE AND b.deleted=FALSE AND b.deleted=FALSE 
+            ORDER BY b.sort, l.name", PDO::FETCH_OBJ);
 
         /** @var LinkBlockDb[] $blocks */
         $blocks = [];
@@ -84,7 +86,7 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
             );
             $blocks[$blockName]->addLink($link);
         }
-        echo "<pre>"; print_r($blocks); echo "</pre>"; die;
+
         return $blocks;
     }
 

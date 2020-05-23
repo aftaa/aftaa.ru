@@ -26,21 +26,13 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
             <div v-for="columns in hrefs">
                 <div class="col col-lg-2 col-sm-3 section" v-for="section in columns">
 
-                    <div v-if="!section.section-private">
-                        <h3 class="mt-3" v-html="section.name"></h3>
-
-
-                        <div class="mb-1" v-for="link in section.links">
-                            <div v-if="!link.lin_private">
-                                <a v-bind:href="link.icon" target="_blank">
-                                    <img alt="" v-bind:src="link.icon" width="16" height="16">
-                                </a>&nbsp;
-
-                                <a v-bind:href="link.href" target="_blank" v-html="link.name"
-                                   v-bind:data-id="link.id" v-on:click="conversion"></a>
-                            </div>
-                        </div>
-
+                    <h3 class="mt-3" v-html="section.name"></h3>
+                    <div class="mb-1" v-for="link in section.links">
+                        <a v-bind:href="link.icon" target="_blank">
+                            <img alt="" v-bind:src="link.icon" width="16" height="16">
+                        </a>&nbsp;
+                        <a v-bind:href="link.href" target="_blank" v-html="link.name"
+                           v-bind:data-id="link.id" v-on:click="conversion"></a>
                     </div>
                 </div>
             </div>

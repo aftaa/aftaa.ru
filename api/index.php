@@ -1,13 +1,19 @@
 <?php
 
-chdir('..');
-require_once 'config/config.php';
+use storage\MyPdoStorage;
 
-use builder\IndexPageBuilder;
-use entity\IndexPage;
+require_once 'config.php';
 
-/** @var IndexPage $thisPage */
-$thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
+$sql = 'SELECT * FROM link l JOIN link_block b ON l.block_id=b.id, '
+    . 'l.name AS link_name, b.name AS block_name'
+    . 'WHERE b.deleted = FALSE AND b.private = FALSE '
+    . 'AND l.deleted = FALSE AND l.private = FALSE '
+    . 'ORDER BY b.sort, l.name';
 
-header("Content-type: application/json; charset=utf-8");
-echo $thisPage->getSectionAsJson();
+$pdo = new MyPdoStorage;
+$rows = $pdo->query($sql);
+
+if (false === $rows) {
+    throw new Exception($pdo->errorInfo(), $pdo->errorCode());
+}
+
