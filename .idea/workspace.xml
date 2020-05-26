@@ -20,23 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/admin/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/admin/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builder/IndexPageBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/builder/IndexPageBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/__autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/__autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db_pdo.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_pdo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/IndexPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/entity/IndexPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json2db.php" beforeDir="false" afterPath="$PROJECT_DIR$/json2db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/after_aftaa.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migration/after_aftaa.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo/DbLink.php" beforeDir="false" afterPath="$PROJECT_DIR$/vo/DbLink.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,13 +73,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/api/admin" />
-      <recent name="$PROJECT_DIR$/favicons" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/migration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/admin" />
+      <recent name="$PROJECT_DIR$/favicons" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -132,7 +119,7 @@
       <workItem from="1590175316320" duration="1617000" />
       <workItem from="1590207144574" duration="6178000" />
       <workItem from="1590353700713" duration="10766000" />
-      <workItem from="1590483690443" duration="17759000" />
+      <workItem from="1590483690443" duration="21139000" />
     </task>
     <servers />
   </component>
@@ -214,20 +201,21 @@
     <state x="747" y="479" width="415" height="160" key="NewPhpFileDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589927700441" />
     <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771507110" />
     <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590405412209" />
-    <state x="199" y="119" width="1022" height="737" key="SettingsEditor" timestamp="1590404781661">
+    <state x="199" y="119" width="1022" height="737" key="SettingsEditor" timestamp="1590518809336">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="399" y="198" width="1240" height="737" key="SettingsEditor/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1590057818984" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771975989" />
-    <state x="199" y="119" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590404781661" />
+    <state x="199" y="119" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590518809336" />
     <state x="696" y="399" width="518" height="316" key="cloudConfig.PluginsDialog" timestamp="1589917350935">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="696" y="399" width="518" height="316" key="cloudConfig.PluginsDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589917350935" />
-    <state x="836" y="399" width="247" height="316" key="cloudConfig.SelfSettingsDialog" timestamp="1589917329849">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="877" y="399" width="244" height="323" key="cloudConfig.SelfSettingsDialog" timestamp="1590518818386">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="836" y="399" width="247" height="316" key="cloudConfig.SelfSettingsDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589917329849" />
+    <state x="877" y="399" width="244" height="323" key="cloudConfig.SelfSettingsDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590518818386" />
     <state x="776" y="300" width="732" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1590500866795">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
