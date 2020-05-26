@@ -11,22 +11,17 @@ class IndexPage
 {
     public $title = 'Hello, aftaa!';
 
-    /** @var LinkBlockDb[] */
-    public $sections = [];
-
     /** @var array */
     public $creditCards = [];
 
     /**
      * IndexPage constructor.
      * @param $title
-     * @param $sections
      * @param array $creditCards
      */
-    public function __construct($title, $sections, array $creditCards)
+    public function __construct($title, array $creditCards = [])
     {
         $this->title = $title;
-        $this->sections = $sections;
         $this->creditCards = $creditCards;
     }
 
@@ -46,34 +41,6 @@ class IndexPage
     {
         $this->title = $title;
         return $this;
-    }
-
-    /**
-     * @return LinkBlockDb[]
-     */
-    public function getSections(): array
-    {
-        return $this->sections;
-    }
-
-    /**
-     * @param LinkBlockDb[] $sections
-     * @return IndexPage
-     */
-    public function setSections(array $sections): IndexPage
-    {
-        $this->sections = $sections;
-        return $this;
-    }
-
-    /**
-     * @return false|string
-     */
-    public function getSectionAsJson()
-    {
-        $sections = $this->getSections();
-        $sections = json_encode($sections);
-        return $sections;
     }
 
     /**

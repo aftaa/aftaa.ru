@@ -5,6 +5,7 @@ require 'config/config.php';
 use builder\IndexPageBuilder;
 use entity\IndexPage;
 
+/** IndexPage $thisPage */
 $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 
 ?><!DOCTYPE html>
@@ -20,13 +21,13 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 </head>
 <body>
 <main id="app">
+
     <div class="container">
         <div class="row">
-            <div v-for="columns in hrefs">
-                <div class="col col-lg-2 col-sm-3 section" v-for="section in columns">
-
-                    <h3 class="mt-3" v-html="section.name"></h3>
-                    <div class="mb-1" v-for="link in section.links">
+            <div class="col col" v-for="(column, colNum) in columns">
+                <div class="col col-lg-2 col-sm-3 section" v-for="(links, blockName) in column">
+                    <h3 class="mt-3" v-html="blockName"></h3>
+                    <div class="mb-1" v-for="link in links">
                         <a v-bind:href="link.icon" target="_blank">
                             <img alt="" v-bind:src="link.icon" width="16" height="16">
                         </a>&nbsp;
@@ -36,14 +37,13 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
                 </div>
             </div>
         </div>
-</main>
-<script src="js/vm.js"></script>
-<footer class="navbar fixed-bottom">
-    <div id="c">&copy; 1983&ndash;<?= date('Y') ?>
-        <a href="mailto:after@aftaa.ru">after</a>
-        <a href="http://kuba.moscow/" target="_blank" id="kuba-moscow">kuba.moscow</a>
     </div>
-</footer>
+</main>
+
+<script src="js/vm.js"></script>
+
+<?php require_once 'include/footer.php' ?>
 <?php require_once 'include/yandex.metrika.html' ?>
+
 </body>
 </html>

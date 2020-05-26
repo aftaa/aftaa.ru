@@ -1,7 +1,7 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        hrefs: [],
+        columns: {},
     },
     methods: {
         conversion: function(event) {
@@ -12,5 +12,9 @@ var vm = new Vue({
 });
 
 $.get('api', function (data) {
-    vm.hrefs = data;
+    if (data.success) {
+        vm.columns = data.columns;
+    } else {
+        // TODO обработать ошибки (в консоль?)
+    }
 });

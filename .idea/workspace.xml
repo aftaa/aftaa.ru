@@ -20,9 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/admin/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builder/IndexPageBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/builder/IndexPageBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/__autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/__autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db_pdo.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_pdo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/IndexPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/entity/IndexPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json2db.php" beforeDir="false" afterPath="$PROJECT_DIR$/json2db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/after_aftaa.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migration/after_aftaa.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vo/DbLink.php" beforeDir="false" afterPath="$PROJECT_DIR$/vo/DbLink.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,22 +76,23 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/favicons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/admin" />
+      <recent name="$PROJECT_DIR$/favicons" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/migration" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/favicons" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -116,6 +131,8 @@
       <workItem from="1590174007093" duration="207000" />
       <workItem from="1590175316320" duration="1617000" />
       <workItem from="1590207144574" duration="6178000" />
+      <workItem from="1590353700713" duration="10766000" />
+      <workItem from="1590483690443" duration="17759000" />
     </task>
     <servers />
   </component>
@@ -161,10 +178,15 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="301" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1590054519733" />
-    <state x="1968" y="160" width="1336" height="737" key="DiffContextDialog" timestamp="1589928232102">
-      <screen x="1920" y="60" width="1440" height="900" />
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590356965034">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590356965034" />
+    <state x="2052" y="130" width="1388" height="836" maximized="true" key="DiffContextDialog" timestamp="1590517237005">
+      <screen x="1920" y="80" width="1440" height="900" />
     </state>
     <state x="1968" y="160" width="1336" height="737" key="DiffContextDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589928232102" />
+    <state x="2052" y="130" width="1388" height="836" maximized="true" key="DiffContextDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590517237004" />
     <state width="1289" height="274" key="GridCell.Tab.0.bottom" timestamp="1589913195026">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -186,18 +208,18 @@
     </state>
     <state x="760" y="264" width="397" height="592" key="NewPhpClassDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589919665187" />
     <state x="804" y="264" width="433" height="599" key="NewPhpClassDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590212581046" />
-    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1590212476407">
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1590405412209">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="747" y="479" width="415" height="160" key="NewPhpFileDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589927700441" />
     <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771507110" />
-    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590212476407" />
-    <state x="199" y="119" width="1022" height="737" key="SettingsEditor" timestamp="1590215214860">
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590405412209" />
+    <state x="199" y="119" width="1022" height="737" key="SettingsEditor" timestamp="1590404781661">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="399" y="198" width="1240" height="737" key="SettingsEditor/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1590057818984" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771975989" />
-    <state x="199" y="119" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590215214860" />
+    <state x="199" y="119" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590404781661" />
     <state x="696" y="399" width="518" height="316" key="cloudConfig.PluginsDialog" timestamp="1589917350935">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -206,18 +228,19 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="836" y="399" width="247" height="316" key="cloudConfig.SelfSettingsDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589917329849" />
-    <state x="776" y="300" width="732" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1590208207413">
+    <state x="776" y="300" width="732" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1590500866795">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1963" y="294" width="527" height="473" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589935543636" />
-    <state x="776" y="300" width="732" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590208207413" />
+    <state x="776" y="300" width="732" height="595" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590500866795" />
     <state x="925" y="270" width="187" height="580" key="ftp.server.browser" timestamp="1588721620400">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="925" y="270" width="187" height="580" key="ftp.server.browser/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588721620400" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1589906414892">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="672" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1590516561232">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589906414892" />
+    <state x="672" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590516561232" />
   </component>
 </project>

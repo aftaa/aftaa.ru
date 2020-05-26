@@ -9,35 +9,12 @@ use strategy\LinkPrivateStrategy;
 
 class IndexPageBuilder
 {
-    /** @var PDO */
-    private $pdo;
-
-    /**
-     * IndexPageBuilder constructor.
-     * @param array $pdoConfig
-     */
-    public function __construct(array $pdoConfig)
-    {
-        $this->pdo = new PDO(
-            $pdoConfig['dsn'],
-            $pdoConfig['user'],
-            $pdoConfig['password']
-        );
-
-        $this->pdo->query('SET NAMES UTF8');
-    }
-
     /**
      * @return IndexPage
      */
     public function build(): IndexPage
     {
-        $storage = new LinkBlockPdoStorage();
-        $storage->setDbh($this->pdo);
-        $blocks = $storage->getAll(new LinkBlockJsonBuilder(new LinkPrivateStrategy));
-        $blocksByColumn = $storage->getAllByColNum($blocks);
-        return new IndexPage('Hello, aftaa!', $blocksByColumn, []);
-
+        return new IndexPage('Hello, aftaa!');
 
 //        $view = new View('links-column', []);// top N
 //        $topLinks = $storage->getTopN(23);

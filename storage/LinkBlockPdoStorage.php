@@ -61,7 +61,7 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
 
         $result = $dbh->query("SELECT *, l.name AS name, b.name AS block_name, 
             l.id AS link_id 
-            FROM link l JOIN link_block b ON link_block_id=b.id
+            FROM link l JOIN link_block b ON block_id=b.id
             WHERE l.private=FALSE AND l.deleted=FALSE AND b.deleted=FALSE AND b.deleted=FALSE 
             ORDER BY b.sort, l.name", PDO::FETCH_OBJ);
 

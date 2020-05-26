@@ -23,7 +23,7 @@ try {
         $blockName = $linkBlock->getName();
         $dbh->query("INSERT INTO link_block SET name='$blockName'");
         $blockId = $dbh->lastInsertId();
-        $sth = $dbh->prepare('INSERT INTO link SET link_block_id=?, name=?, href=?, private=?, icon=?');
+        $sth = $dbh->prepare('INSERT INTO link SET block_id=?, name=?, href=?, private=?, icon=?');
         $sth->bindValue(1, $blockId);
         foreach ($linkBlock->getLinks() as $link) {
             $sth->bindValue(2, $link->getName());
