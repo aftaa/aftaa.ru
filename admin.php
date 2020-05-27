@@ -43,18 +43,20 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                                    v-bind:data-id="link.id" v-on:click="conversion"></a>
                             </td>
                             <td>
-
+                                <a href="api/admin/link/edit" v-bind:data-id="link.id" v-on:click="unlink">
+                                    <img alt="" src="open-iconic-master/svg/x.svg" class="svg-edit">
+                                </a>
                             </td>
-                            <td>
-
+                            <td width="20">
+                                <a href="api/admin/link/delete" v-bind:data-id="link.id" v-on:click="unlink">
+                                    <img alt="" src="open-iconic-master/svg/x.svg" class="svg-unlink">
+                                </a>
                             </td>
                         </tr>
                     </table>
-
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </main>
 

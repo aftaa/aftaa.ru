@@ -1,0 +1,13 @@
+.block {
+    width: 227px;
+}
+table {
+    width: 197px;
+}
+
+.svg-unlink {
+    width: 16px;
+    height: 16px;
+    background: red;
+    border-radius: 6px;
+}
