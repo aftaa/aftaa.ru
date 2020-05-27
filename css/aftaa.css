@@ -1,7 +1,31 @@
+.b {
+    font-weight: bold;
+}
+
+header,
 footer {
     background: #212529;
     color: #aaa;
     font-size: 14px;
+}
+
+header {
+    padding: .5em;
+    text-align: right;
+    font-family: Tahoma, Arial, sans-serif
+    font-size: 11px;
+    background: lightblue !important;
+}
+
+header a {
+    color: #212529;
+    font-size: 14px;
+    text-decoration: none !important;
+    margin: 0 1em;
+}
+
+header a:hover {
+    color: #ff0;
 }
 
 #c {
@@ -42,6 +66,6 @@ footer a:hover {
     border-radius: 5px;
 }
 
-div.section {
+div.block {
     white-space: nowrap;
 }

@@ -20,10 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/admin/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/admin/trash.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/expert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/expert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/max.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/max.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/aftaa.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/aftaa.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/Visitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/helper/Visitor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +73,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,10 +84,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api" />
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/migration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/api/admin" />
       <recent name="$PROJECT_DIR$/favicons" />
     </key>
@@ -119,7 +131,7 @@
       <workItem from="1590175316320" duration="1617000" />
       <workItem from="1590207144574" duration="6178000" />
       <workItem from="1590353700713" duration="10766000" />
-      <workItem from="1590483690443" duration="21139000" />
+      <workItem from="1590483690443" duration="37633000" />
     </task>
     <servers />
   </component>
@@ -165,15 +177,15 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="301" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1590054519733" />
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590356965034">
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590521733847">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590356965034" />
-    <state x="2052" y="130" width="1388" height="836" maximized="true" key="DiffContextDialog" timestamp="1590517237005">
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590521733847" />
+    <state x="1982" y="130" width="1287" height="787" maximized="true" key="DiffContextDialog" timestamp="1590530971213">
       <screen x="1920" y="80" width="1440" height="900" />
     </state>
     <state x="1968" y="160" width="1336" height="737" key="DiffContextDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589928232102" />
-    <state x="2052" y="130" width="1388" height="836" maximized="true" key="DiffContextDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590517237004" />
+    <state x="1982" y="130" width="1287" height="787" maximized="true" key="DiffContextDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590530971213" />
     <state width="1289" height="274" key="GridCell.Tab.0.bottom" timestamp="1589913195026">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -190,17 +202,17 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1289" height="274" key="GridCell.Tab.0.right/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589913195026" />
-    <state x="804" y="264" width="433" height="599" key="NewPhpClassDialog" timestamp="1590212581046">
+    <state x="804" y="264" width="433" height="599" key="NewPhpClassDialog" timestamp="1590521705162">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="760" y="264" width="397" height="592" key="NewPhpClassDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589919665187" />
-    <state x="804" y="264" width="433" height="599" key="NewPhpClassDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590212581046" />
-    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1590405412209">
+    <state x="804" y="264" width="433" height="599" key="NewPhpClassDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590521705162" />
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1590528627581">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="747" y="479" width="415" height="160" key="NewPhpFileDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589927700441" />
     <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771507110" />
-    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590405412209" />
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590528627581" />
     <state x="199" y="119" width="1022" height="737" key="SettingsEditor" timestamp="1590518809336">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -230,5 +242,16 @@
     </state>
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589906414892" />
     <state x="672" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590516561232" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/vm.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

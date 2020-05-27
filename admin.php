@@ -2,11 +2,10 @@
 
 require 'config/config.php';
 
-use builder\IndexPageBuilder;
+use builder\AdminIndexPageBuilder;
 use entity\IndexPage;
 
-/** IndexPage $thisPage */
-$thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
+$thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 
 ?><!DOCTYPE html>
 <html lang="ru">
@@ -20,27 +19,54 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
     <script src="js/vue-2.6.11.js"></script>
 </head>
 <body>
-<main id="app">
 
+<?php require_once 'include/header.php' ?>
+
+<main id="app">
     <div class="container">
         <div class="row">
-            <div class="col-sm-5" v-for="(column, colNum) in columns">
-                <div class="section" v-for="(links, blockName) in column">
+            <div v-for="(column, colNum) in columns">
+                <div class="block glyphicon glyphicon-pencil col-sm-6 col-lg-4" v-for="(block, blockName) in column">
                     <h3 class="mt-3" v-html="blockName"></h3>
-                    <div class="mb-1" v-for="link in links">
-                        <a v-bind:href="link.icon" target="_blank">
-                            <img alt="" v-bind:src="link.icon" width="16" height="16">
-                        </a>&nbsp;
-                        <a v-bind:href="link.href" target="_blank" v-html="link.name"
-                           v-bind:data-id="link.id" v-on:click="conversion"></a>
-                    </div>
+
+                    <table class="table table-bordered">
+                        <tr v-for="link in block.links">
+                            <td>
+                                <a v-bind:href="link.icon" target="_blank">
+                                    <img alt="" v-bind:src="link.icon" width="16" height="16">
+                                </a>&nbsp;
+
+                            </td>
+                            <td>
+                                <a v-bind:href="link.href" target="_blank" v-html="link.name"
+                                   v-bind:data-id="link.id" v-on:click="conversion"></a>
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </main>
 
 <script src="js/vm.js"></script>
+<script>
+    $.get('api/admin', function (data) {
+        if (data.success) {
+            vm.columns = data.columns;
+        } else {
+            // TODO обработать ошибки (в консоль?)
+        }
+    });
+</script>
 
 <?php require_once 'include/footer.php' ?>
 <?php require_once 'include/yandex.metrika.html' ?>

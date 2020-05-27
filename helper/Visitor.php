@@ -33,7 +33,7 @@ class Visitor
                 }
             }
         }
-        return false;
+        return true;
     }
 
     /**
@@ -41,13 +41,10 @@ class Visitor
      */
     public static function isAftaa()
     {
-        if (self::basicAuth()) {
-            return true;
-        }
-
-        $isAftaa = !empty($_REQUEST[self::GET_KEY]);
-        $isAftaa = $isAftaa && self::checkIPs();
-        return $isAftaa;
+        $isAdmin = self::basicAuth();
+        //$isAdmin &= !empty($_REQUEST[self::GET_KEY]);
+        $isAdmin &= self::checkIPs();
+        return $isAdmin;
     }
 
     /**
@@ -56,9 +53,6 @@ class Visitor
     private static function checkIPs(): bool
     {
         $ip = $_SERVER['REMOTE_ADDR'];
-        if ('172.16.1.2' == $ip) {
-            return true;
-        }
         return in_array($ip, self::MY_IPS);
     }
 }

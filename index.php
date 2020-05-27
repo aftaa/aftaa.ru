@@ -20,12 +20,14 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
     <script src="js/vue-2.6.11.js"></script>
 </head>
 <body>
-<main id="app">
 
+<?php require_once 'include/header.php' ?>
+
+<main id="app">
     <div class="container">
         <div class="row">
-            <div class="col-sm-5" v-for="(column, colNum) in columns">
-                <div class="section" v-for="(links, blockName) in column">
+            <div v-for="(column, colNum) in columns">
+                <div class="block col-sm-6 col-lg-4" v-for="(links, blockName) in column">
                     <h3 class="mt-3" v-html="blockName"></h3>
                     <div class="mb-1" v-for="link in links">
                         <a v-bind:href="link.icon" target="_blank">
@@ -41,6 +43,15 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 </main>
 
 <script src="js/vm.js"></script>
+<script>
+    $.get('api', function (response) {
+        if (response.success) {
+            vm.columns = response.columns;
+        } else {
+            // TODO обработать ошибки (в консоль?)
+        }
+    });
+</script>
 
 <?php require_once 'include/footer.php' ?>
 <?php require_once 'include/yandex.metrika.html' ?>

@@ -10,11 +10,3 @@ var vm = new Vue({
         }
     },
 });
-
-$.get('api', function (data) {
-    if (data.success) {
-        vm.columns = data.columns;
-    } else {
-        // TODO обработать ошибки (в консоль?)
-    }
-});
