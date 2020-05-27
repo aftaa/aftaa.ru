@@ -15,6 +15,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/aftaa.css">
+    <link rel="stylesheet" href="css/admin.css">
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/vue-2.6.11.js"></script>
 </head>
@@ -29,7 +30,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                 <div class="block glyphicon glyphicon-pencil col-sm-6 col-lg-4" v-for="(block, blockName) in column">
                     <h3 class="mt-3" v-html="blockName"></h3>
 
-                    <table class="table table-bordered">
+                    <table class="table-bordered table-hover">
                         <tr v-for="link in block.links">
                             <td>
                                 <a v-bind:href="link.icon" target="_blank">
