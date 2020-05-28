@@ -7,11 +7,11 @@ try {
     $sql = 'SELECT l.id, l.name AS link_name, b.name AS block_name, '
         . 'col_num, href, icon '
         . 'FROM link l JOIN link_block b ON l.block_id=b.id '
-        . 'WHERE b.deleted = FALSE AND b.private = FALSE '
-        . 'AND l.deleted = FALSE AND l.private = FALSE '
+        . 'WHERE b.deleted = FALSE AND l.deleted = FALSE '
+        . 'AND l.private = FALSE AND b.private = FALSE '
         . 'ORDER BY b.sort, l.name';
     $pdo = new MyPdoStorage;
-    $rows = $pdo->query($sql, PDO::FETCH_OBJ);
+    $rows = $pdo->query($sql);
 
     if (false === $rows) {
         throw new Exception(print_r($pdo->errorInfo(), true), $pdo->errorCode());

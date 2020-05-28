@@ -21,5 +21,6 @@ class PdoStorage extends PDO
             $config->getPassword(),
             $config->getOptions(),
         );
+        $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 }

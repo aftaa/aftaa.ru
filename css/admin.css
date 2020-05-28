@@ -1,6 +1,7 @@
 .block {
     width: 227px;
 }
+
 table {
     width: 197px;
 }
@@ -10,4 +11,12 @@ table {
     height: 16px;
     background: red;
     border-radius: 6px;
+}
+
+.row {
+    margin-bottom: 3em;
+}
+
+.dropped {
+    opacity: .5;
 }

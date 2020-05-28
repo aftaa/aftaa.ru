@@ -4,7 +4,7 @@
 require 'config/config.php';
 
 use builder\IndexPageBuilder;
-use entity\IndexPage;use helper\Visitor;
+use helper\Visitor;
 
 if (!Visitor::isAftaa()) {
     header('Location: 403.shtml');
@@ -27,6 +27,8 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 
 <?php require_once 'include/header.php' ?>
 
+<?php if (\helper\Visitor::isAftaa()): ?>
+
 <main id="app">
     <div class="container">
         <div class="row">
@@ -48,7 +50,7 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 
 <script src="js/vm.js"></script>
 <script>
-    $.get('api/expert.php', function (response) {
+    $.get('api/expert-data.php', function (response) {
         if (response.success) {
             vm.columns = response.columns;
         } else {
@@ -56,6 +58,8 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
         }
     });
 </script>
+
+<?php endif ?>
 
 <?php require_once 'include/footer.php' ?>
 <?php require_once 'include/yandex.metrika.html' ?>

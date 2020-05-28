@@ -5,12 +5,6 @@ use storage\MyPdoStorage;
 
 try {
     require_once 'config.php';
-
-    if (!Visitor::isAftaa()) {
-        header('HTTP/1.0 403 Forbidden', true, 403);
-        exit;
-    }
-
     $sql = 'SELECT l.id, l.name AS link_name, b.name AS block_name, '
         . 'col_num, href, icon '
         . 'FROM link l JOIN link_block b ON l.block_id=b.id '
@@ -18,11 +12,7 @@ try {
         . 'AND l.deleted = FALSE '
         . 'ORDER BY b.sort, l.name';
     $pdo = new MyPdoStorage;
-    $rows = $pdo->query($sql, PDO::FETCH_OBJ);
-
-    if (false === $rows) {
-        throw new Exception(print_r($pdo->errorInfo(), true), $pdo->errorCode());
-    }
+    $rows = $pdo->query($sql);
 
     $data = [];
     while ($row = $rows->fetchObject()) {
@@ -32,7 +22,6 @@ try {
             'href' => $row->href,
             'icon' => $row->icon,
         ];
-
         $data[$row->col_num][$row->block_name][] = $link;
     }
 
@@ -44,5 +33,3 @@ try {
 } catch (Exception $e) {
     require_once 'include/exception.php';
 }
-
-

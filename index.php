@@ -44,13 +44,7 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 
 <script src="js/vm.js"></script>
 <script>
-    $.get('api', function (response) {
-        if (response.success) {
-            vm.columns = response.columns;
-        } else {
-            // TODO обработать ошибки (в консоль?)
-        }
-    });
+    vm.loadIndexData();
 </script>
 
 <?php require_once 'include/footer.php' ?>
