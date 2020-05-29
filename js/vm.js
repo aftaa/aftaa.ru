@@ -1,6 +1,7 @@
 var vm = new Vue({
     el: '#app',
     data: {
+        api: 'http://api.aftaa.ru.local/api/',
         columns: {},
         trash: {},
     },
@@ -14,7 +15,7 @@ var vm = new Vue({
          * Get index elements for all.
          */
         loadIndexData: function () {
-            $.get('api/index-data.php', function (response) {
+            $.get(vm.api + 'index-data.php', function (response) {
                 vm.columns = response.columns;
             });
         },
@@ -23,7 +24,7 @@ var vm = new Vue({
          * Get index elements for me.
          */
         loadExpertData: function () {
-            $.get('api/expert-data.php', function (response) {
+            $.get(vm.api + 'expert-data.php', function (response) {
                 vm.columns = response.columns;
             });
         },
@@ -32,7 +33,7 @@ var vm = new Vue({
          * Get admin index elements.
          */
         loadAdminIndexData: function () {
-            $.get('api/admin/index-data.php', function (response) {
+            $.get('admin/index-data.php', function (response) {
                 vm.columns = response.columns;
             });
         },
@@ -41,7 +42,7 @@ var vm = new Vue({
          * Get deleted elements.
          */
         loadAdminTrashData: function () {
-            $.get('api/admin/trash-data.php', function (response) {
+            $.get('admin/trash-data.php', function (response) {
                 vm.trash = response.columns;
             });
         },
