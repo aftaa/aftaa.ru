@@ -4,6 +4,9 @@ var vm = new Vue({
         api: 'http://api.aftaa.ru.local/api/',
         columns: {},
         trash: {},
+        debug: true,
+        requestDataFail: false,
+        status: 200,
     },
     methods: {
         conversion: function (event) {
@@ -15,8 +18,12 @@ var vm = new Vue({
          * Get index elements for all.
          */
         loadIndexData: function () {
-            $.get(vm.api + 'index-data.php', function (response) {
-                vm.columns = response.columns;
+            $.get(vm.api + 'data/index-data', function (data, textStatus, jqXHR) {
+                if (data.success) {
+                    vm.columns = data.response.columns;
+                } else {
+                    vm.consoleErrorReport(data);
+                }
             });
         },
 
@@ -24,8 +31,14 @@ var vm = new Vue({
          * Get index elements for me.
          */
         loadExpertData: function () {
-            $.get(vm.api + 'expert-data.php', function (response) {
-                vm.columns = response.columns;
+            let t = this;
+
+            $.get(t.api + 'data/expert-data', function (data) {
+                if (data.success) {
+                    t.columns = data.response.columns;
+                }
+            }).fail(function (jqXHR, testStatus) {
+                t.consoleErrorReport(jqXHR.responseJSON, testStatus);
             });
         },
 
@@ -33,18 +46,22 @@ var vm = new Vue({
          * Get admin index elements.
          */
         loadAdminIndexData: function () {
-            $.get('admin/index-data.php', function (response) {
-                vm.columns = response.columns;
-            });
+            if (data.success) {
+                vm.columns = data.response.columns;
+            } else {
+                vm.consoleErrorReport(data);
+            }
         },
 
         /**
          * Get deleted elements.
          */
         loadAdminTrashData: function () {
-            $.get('admin/trash-data.php', function (response) {
-                vm.trash = response.columns;
-            });
+            if (data.success) {
+                vm.columns = data.response.columns;
+            } else {
+                vm.consoleErrorReport(data);
+            }
         },
 
         /**
@@ -97,6 +114,24 @@ var vm = new Vue({
                 vm.loadAdminIndexData();
             });
             event.preventDefault();
-        }
+        },
+
+        consoleErrorReport: function (response, textStatus) {
+
+
+
+            if (response.exception) {
+                if (500 == response.status) {
+                    this.status = 500;
+                }
+
+                console.log('PHP exception ', response.exception.code);
+                console.log('Message:', response.exception.message);
+                console.log('File:', response.exception.file);
+                console.log('Line:', response.exception.line);
+                console.log('Output:', response.output);
+                console.log('API status:', response.status);
+            }
+        },
     },
 });

@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/include/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert.php" beforeDir="false" afterPath="$PROJECT_DIR$/expert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/LinkBlockPdoStorage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +77,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -127,7 +133,8 @@
       <workItem from="1590207144574" duration="6178000" />
       <workItem from="1590353700713" duration="10766000" />
       <workItem from="1590483690443" duration="81836000" />
-      <workItem from="1590962447702" duration="1507000" />
+      <workItem from="1590962447702" duration="9354000" />
+      <workItem from="1590981325389" duration="14577000" />
     </task>
     <servers />
   </component>
@@ -219,18 +226,18 @@
     </state>
     <state x="760" y="264" width="397" height="592" key="NewPhpClassDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589919665187" />
     <state x="804" y="264" width="433" height="599" key="NewPhpClassDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590521705162" />
-    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1590686186116">
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1590996898064">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="747" y="479" width="415" height="160" key="NewPhpFileDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589927700441" />
     <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771507110" />
-    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590686186116" />
-    <state x="199" y="119" width="1022" height="737" key="SettingsEditor" timestamp="1590863708542">
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590996898064" />
+    <state x="199" y="119" width="1022" height="737" key="SettingsEditor" timestamp="1590965329794">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="399" y="198" width="1240" height="737" key="SettingsEditor/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1590057818984" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771975989" />
-    <state x="199" y="119" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590863708542" />
+    <state x="199" y="119" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590965329794" />
     <state width="577" height="446" key="SwitcherDM" timestamp="1590666916628">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -257,12 +264,12 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="925" y="270" width="187" height="580" key="ftp.server.browser/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588721620400" />
-    <state x="672" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1590694729764">
+    <state x="672" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1590979645731">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589906414892" />
     <state x="492" y="190" width="672" height="478" key="search.everywhere.popup/72.27.1294.741/1920.80.1440.900@72.27.1294.741" timestamp="1590681269930" />
-    <state x="672" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590694729764" />
+    <state x="672" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590979645731" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

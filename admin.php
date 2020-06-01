@@ -3,13 +3,13 @@
 
 require 'config/config.php';
 
-use builder\IndexPageBuilder;
+use builder\AdminIndexPageBuilder;use builder\IndexPageBuilder;
 use helper\Visitor;
 
-if (!Visitor::isAftaa()) {
-    header('Location: 403.shtml');
-    exit;
-}
+//if (!Visitor::isAftaa()) {
+//    header('Location: 403.shtml');
+//    exit;
+//}
 
 $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 

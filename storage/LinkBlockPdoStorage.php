@@ -33,7 +33,7 @@ class LinkBlockPdoStorage implements LinkBlockStorageInterface
         $query = "SELECT COUNT(l.id) AS cnt, l.* 
                     FROM link_view lv JOIN link l ON l.id=link_id 
                     GROUP BY l.id ORDER BY cnt DESC, l.name LIMIT $limit";
-        $sth = $dbh->query($query, PDO::FETCH_OBJ);
+        $sth = $dbh->query($query, PDO::FETCH_OBJ);d
 
         $linkBlockDb = new LinkBlockDb("my top", []);
         foreach ($sth as $row) {
