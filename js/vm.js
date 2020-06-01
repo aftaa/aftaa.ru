@@ -18,7 +18,7 @@ var vm = new Vue({
          * Get index elements for all.
          */
         loadIndexData: function () {
-            $.get(vm.api + 'data/index-data', function (data, textStatus, jqXHR) {
+            $.get(this.api + 'data/index-data', function (data, textStatus, jqXHR) {
                 if (data.success) {
                     vm.columns = data.response.columns;
                 } else {
@@ -123,6 +123,9 @@ var vm = new Vue({
             if (response.exception) {
                 if (500 == response.status) {
                     this.status = 500;
+                }
+                if (401 == response.status) {
+                    this.status = 401;
                 }
 
                 console.log('PHP exception ', response.exception.code);

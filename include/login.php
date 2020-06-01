@@ -4,6 +4,6 @@
     500 Internal Server Error
 </div>
 
-<div class="alert-warning" v-if="401 == status">
+<div class="alert-warning" v-if="status == 401">
     Вы не авторизованы.
 </div>
