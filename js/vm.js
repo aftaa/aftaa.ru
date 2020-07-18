@@ -45,23 +45,31 @@ var vm = new Vue({
         /**
          * Get admin index elements.
          */
-        loadAdminIndexData: function () {
-            if (data.success) {
-                vm.columns = data.response.columns;
-            } else {
-                vm.consoleErrorReport(data);
-            }
+        loadAdminIndexData: function (data) {
+            let t = this;
+
+            $.get(t.api + 'data/admin-data', function (data) {
+                if (data.success) {
+                    t.columns = data.response.columns;
+                }
+            }).fail(function (jqXHR, testStatus) {
+                t.consoleErrorReport(jqXHR.responseJSON, testStatus);
+            });
         },
 
         /**
-         * Get deleted elements.
+         * Get "deleted" elements.
          */
         loadAdminTrashData: function () {
-            if (data.success) {
-                vm.columns = data.response.columns;
-            } else {
-                vm.consoleErrorReport(data);
-            }
+            let t = this;
+
+            $.get(t.api + 'data/trash-data', function (data) {
+                if (data.success) {
+                    t.trash = data.response.columns;
+                }
+            }).fail(function (jqXHR, testStatus) {
+                t.consoleErrorReport(jqXHR.responseJSON, testStatus);
+            });
         },
 
         /**
@@ -117,7 +125,6 @@ var vm = new Vue({
         },
 
         consoleErrorReport: function (response, textStatus) {
-
 
 
             if (response.exception) {
