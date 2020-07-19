@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/max.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/max.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/admin-trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/admin-trash.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +68,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.bash_aliases" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -137,12 +139,16 @@
       <workItem from="1591654704505" duration="1031000" />
       <workItem from="1595010724735" duration="8607000" />
       <workItem from="1595065284946" duration="3101000" />
-      <workItem from="1595096563869" duration="693000" />
+      <workItem from="1595096563869" duration="966000" />
+      <workItem from="1595097625387" duration="5516000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".bash_aliases" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -195,11 +201,11 @@
     </state>
     <state x="1968" y="160" width="1336" height="737" key="DiffContextDialog/0.27.1920.1053/1920.60.1440.900@0.27.1920.1053" timestamp="1589928232102" />
     <state x="1982" y="130" width="1287" height="787" maximized="true" key="DiffContextDialog/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590964644302" />
-    <state x="564" y="220" width="374" height="373" key="FileChooserDialogImpl" timestamp="1590702306787">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state x="774" y="301" width="374" height="373" key="FileChooserDialogImpl" timestamp="1595097443151">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="564" y="220" width="374" height="373" key="FileChooserDialogImpl/72.27.1294.741/1920.80.1440.900@72.27.1294.741" timestamp="1590702306787" />
-    <state x="774" y="301" width="424" height="520" key="FileChooserDialogImpl/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1590590900651" />
+    <state x="774" y="301" width="424" height="520" key="FileChooserDialogImpl/72.27.1848.1053/1920.80.1440.900@72.27.1848.1053" timestamp="1595097443151" />
     <state width="853" height="172" key="GridCell.Tab.0.bottom" timestamp="1590680871128">
       <screen x="72" y="27" width="1294" height="741" />
     </state>

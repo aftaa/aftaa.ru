@@ -11,7 +11,7 @@ var vm = new Vue({
     methods: {
         conversion: function (event) {
             let id = event.target.dataset.id;
-            $.get('view.php', {id: id});
+            $.get('view', {id: id});
         },
 
         /**
@@ -76,9 +76,11 @@ var vm = new Vue({
          * Drop link.
          * @param event
          */
-        unlink: function (event) {
+        unlinkLink: function (event) {
             if (confirm('Sure?')) {
-                $.post(event.target.href, {id: event.target.dataset.id}, function (data) {
+                let href = this.api + 'link/unlink-link';
+
+                $.post(href, {id: event.target.dataset.id}, function (data) {
                     $(event.target).parent().parent().fadeOut('slow');
                     vm.loadAdminTrashData();
                 });
@@ -90,8 +92,10 @@ var vm = new Vue({
          * Recovery link.
          * @param event
          */
-        recovery: function (event) {
-            $.post(event.target.href, {id: event.target.dataset.id}, function (data) {
+        recoveryLink: function (event) {
+            let href = this.api + 'link/recovery-link';
+
+            $.post(href, {id: event.target.dataset.id}, function (data) {
                 vm.loadAdminIndexData();
                 vm.loadAdminTrashData();
             });
@@ -102,9 +106,11 @@ var vm = new Vue({
          * Restore block.
          * @param event
          */
-        dropBlock: function (event) {
+        unlinkBlock: function (event) {
             if (confirm('Sure?')) {
-                $.post(event.target.href, {id: event.target.dataset.id}, function (data) {
+                let href = this.api + 'block/unlink-block';
+
+                $.post(href, {id: event.target.dataset.id}, function (data) {
                     $(event.target).parent().parent().fadeOut('slow');
                     vm.loadAdminTrashData();
                 });
@@ -116,8 +122,10 @@ var vm = new Vue({
          *
          * @param event
          */
-        restore: function (event) {
-            $.post(event.target.href, {id: event.target.dataset.id}, function (data) {
+        recoveryBlock: function (event) {
+            let href = this.api + 'block/recovery-block';
+
+            $.post(href, {id: event.target.dataset.id}, function (data) {
                 $(event.target).parent().parent().fadeOut();
                 vm.loadAdminIndexData();
             });

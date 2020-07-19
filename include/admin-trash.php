@@ -10,7 +10,7 @@
                 <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.private"></div>
                 <h3 class="mt-3">
                     <span v-html="blockName"></span>
-                    <a href="api/admin/block/restore.php" v-bind:data-id="block.id" v-on:click="restore"
+                    <a href="#" v-bind:data-id="block.id" v-on:click="recoveryBlock"
                        class="ui-icon ui-icon-arrow-1-e-w">
                     </a>
                 </h3>
@@ -28,7 +28,7 @@
                                v-bind:data-id="link.id" v-on:click="conversion"></a>
                         </td>
                         <td width="20">
-                            <a href="api/admin/link/recovery.php" v-bind:data-id="link.id" v-on:click="recovery"
+                            <a href="#" v-bind:data-id="link.id" v-on:click="recoveryLink"
                                class="ui-icon ui-icon-arrow-1-e-w">
                             </a>
                         </td>

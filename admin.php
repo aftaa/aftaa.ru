@@ -54,7 +54,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                             <!--                           class="ui-icon ui-icon-pencil">-->
                             <!--                        </a>-->
 
-                            <a href="api/admin/block/drop.php" v-bind:data-id="block.id" v-on:click="dropBlock"
+                            <a href="#" v-bind:data-id="block.id" v-on:click="unlinkBlock"
                                class="ui-icon ui-icon-trash">
                             </a>
                         </h3>
@@ -79,7 +79,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                                 <!--                                </a>-->
                                 <!--                            </td>-->
                                 <td width="20">
-                                    <a href="api/admin/link/unlink.php" v-bind:data-id="link.id" v-on:click="unlink"
+                                    <a href="#" v-bind:data-id="link.id" v-on:click="unlinkLink"
                                        class="ui-icon ui-icon-trash">
                                     </a>
                                 </td>
