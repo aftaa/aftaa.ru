@@ -3,7 +3,7 @@ var vm = new Vue({
     data: {
         api: 'http://api.aftaa.ru.local/api/',
         columns: {},
-        trash: {},
+        trashColumns: {},
         debug: true,
         requestDataFail: false,
         status: 200,
@@ -37,8 +37,8 @@ var vm = new Vue({
                 if (data.success) {
                     t.columns = data.response.columns;
                 }
-            }).fail(function (jqXHR, testStatus) {
-                t.consoleErrorReport(jqXHR.responseJSON, testStatus);
+            }).fail(function (jqXHR) {
+                t.consoleErrorReport(jqXHR.responseJSON);
             });
         },
 
@@ -52,8 +52,8 @@ var vm = new Vue({
                 if (data.success) {
                     t.columns = data.response.columns;
                 }
-            }).fail(function (jqXHR, testStatus) {
-                t.consoleErrorReport(jqXHR.responseJSON, testStatus);
+            }).fail(function (jqXHR) {
+                t.consoleErrorReport(jqXHR.responseJSON);
             });
         },
 
@@ -65,10 +65,10 @@ var vm = new Vue({
 
             $.get(t.api + 'data/trash-data', function (data) {
                 if (data.success) {
-                    t.trash = data.response.columns;
+                    t.trashColumns = data.response.columns;
                 }
-            }).fail(function (jqXHR, testStatus) {
-                t.consoleErrorReport(jqXHR.responseJSON, testStatus);
+            }).fail(function (jqXHR) {
+                t.consoleErrorReport(jqXHR.responseJSON);
             });
         },
 
@@ -77,14 +77,13 @@ var vm = new Vue({
          * @param event
          */
         unlinkLink: function (event) {
-            if (confirm('Sure?')) {
-                let href = this.api + 'link/unlink-link';
+            let href = this.api + 'link/unlink-link';
+            let id = event.target.dataset.id;
 
-                $.post(href, {id: event.target.dataset.id}, function (data) {
-                    $(event.target).parent().parent().fadeOut('slow');
-                    vm.loadAdminTrashData();
-                });
-            }
+            $.post(href, {id: id}, function (data) {
+                $(event.target).parent().parent().fadeOut('slow');
+                vm.loadAdminTrashData();
+            });
             event.preventDefault();
         },
 
@@ -107,14 +106,12 @@ var vm = new Vue({
          * @param event
          */
         unlinkBlock: function (event) {
-            if (confirm('Sure?')) {
-                let href = this.api + 'block/unlink-block';
+            let href = this.api + 'block/unlink-block';
 
-                $.post(href, {id: event.target.dataset.id}, function (data) {
-                    $(event.target).parent().parent().fadeOut('slow');
-                    vm.loadAdminTrashData();
-                });
-            }
+            $.post(href, {id: event.target.dataset.id}, function (data) {
+                $(event.target).parent().parent().fadeOut('slow');
+                vm.loadAdminTrashData();
+            });
             event.preventDefault();
         },
 
@@ -132,6 +129,23 @@ var vm = new Vue({
             event.preventDefault();
         },
 
+        editLink: function (event) {
+        },
+        addLink: function (event) {
+        },
+        addBlock: function (event) {
+        },
+        editBlock: function (event) {
+        },
+        blockList: function () {
+            let t = this;
+            $.get(this.api + 'block/blocks-list', function (data) {
+                // TODO
+            }).fail(function (jqXHR) {
+                t.consoleErrorReport(jqXHR.responseJSON);
+            });
+        },
+
         consoleErrorReport: function (response, textStatus) {
 
 
@@ -143,12 +157,12 @@ var vm = new Vue({
                     this.status = 401;
                 }
 
-                console.log('PHP exception ', response.exception.code);
-                console.log('Message:', response.exception.message);
-                console.log('File:', response.exception.file);
-                console.log('Line:', response.exception.line);
-                console.log('Output:', response.output);
-                console.log('API status:', response.status);
+                console.error('PHP exception ', response.exception.code);
+                console.error('Message:', response.exception.message);
+                console.error('File:', response.exception.file);
+                console.error('Line:', response.exception.line);
+                console.error('Output:', response.output);
+                console.error('API status:', response.status);
             }
         },
     },

@@ -1,10 +1,10 @@
 
-<div class="container" v-if="trash">
-    <hr size="1 ">
+<div class="container" v-if="trashColumns">
+    <hr size="1m">
     <h1><img src="image/recycle.png" width="64" height="64" alt=""> Recycle bin</h1>
 
     <div class="row">
-        <div v-for="(column, colNum) in trash">
+        <div v-for="(column, colNum) in trashColumns">
             <div class="block col-sm-6 col-lg-4" v-bind:class="{ dropped: block.deleted }" v-for="(block, blockName) in column">
 
                 <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.private"></div>
@@ -14,7 +14,6 @@
                        class="ui-icon ui-icon-arrow-1-e-w">
                     </a>
                 </h3>
-
 
                 <table class="table-hover table-bordered">
                     <tr v-for="link in block.links">

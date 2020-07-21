@@ -20,9 +20,99 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/max.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/max.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/108674608.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/5ka.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/K&amp;B.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/aftaa.ru.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/after.aftaa.ru.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/after.aftaa.ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/asus.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/asus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/beeline.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/calendar.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/calendar_import.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/connect.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/contacts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/disk.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/docs.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/drive.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/emias.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/facebook.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/find.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/fornex.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/foursquare.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/fssp.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/gabidullin@gmail.com.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/github.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/gmail.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/gosuslugi.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/hh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/instagram.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/internet.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/keep.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/kinopoisk.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/kontinent.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/kuba.moscow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/kuba.msk.ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/lepra.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/lj.aftaa.ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/lj.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/mail.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/mail.ru.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/maps.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/maps.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/maxim.gabidullin.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/maximafter.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/maximgabidullin.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/messenger.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/metrika.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/mgts.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/microweb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/microweb_pMA.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/microweb_pma.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/mirponitke.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/mixcloud.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/mom's_work.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/money.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/mos.ru.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/mosenergo.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/nic.ru.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/ok.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/omut_2019.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/paypal.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/petelinka.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/pkb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/plugins.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/pochta.ru.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/pogoda.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/priem.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/qiwi.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/raiffaisen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/roundcube.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/sberbank.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/soundcloud.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/sportmaster.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/spreadsheets.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/stolichki.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/stoloto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/swarm.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/translate.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/tv.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/twitter.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/victoria.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/vk.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/vsesrazu.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/vseti-goroda.aftaa.ru.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/vseti-goroda.aftaa.ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/vseti.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/webmoney.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/whatsapp.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/yarko.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/zakaznoe.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/zdorov.ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicons/zte.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/include/admin-trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/admin-trash.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
     </list>
@@ -79,19 +169,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/api/admin/block" />
-      <recent name="$PROJECT_DIR$/api/admin/link" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/api/admin" />
-      <recent name="$PROJECT_DIR$/favicons" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api/admin" />
       <recent name="$PROJECT_DIR$/api/admin/link" />
       <recent name="$PROJECT_DIR$/api" />
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/migration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/admin/block" />
+      <recent name="$PROJECT_DIR$/api/admin/link" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/api/admin" />
+      <recent name="$PROJECT_DIR$/favicons" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -140,7 +230,10 @@
       <workItem from="1595010724735" duration="8607000" />
       <workItem from="1595065284946" duration="3101000" />
       <workItem from="1595096563869" duration="966000" />
-      <workItem from="1595097625387" duration="5516000" />
+      <workItem from="1595097625387" duration="7653000" />
+      <workItem from="1595190755080" duration="7044000" />
+      <workItem from="1595268219409" duration="3021000" />
+      <workItem from="1595318137089" duration="4035000" />
     </task>
     <servers />
   </component>

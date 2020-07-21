@@ -24,6 +24,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
     <link rel="stylesheet" href="css/admin.css">
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/vue-2.6.11.js"></script>
+    <script src="js/bootstrap.js"></script>
 
     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
     <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
@@ -38,6 +39,23 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 
 <?php require_once 'include/header.php' ?>
 
+<!--<button type="button" data-toggle="modal" data-target="#myModal">Запустить модаль</button>-->
+
+<div id="myModal" class="odal ade bs-example-modal-sm" tabindex="-1" role="" aria-labelledby="mySmallModalLabel" aria-hidden="false">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-header">Добавить ссылку</div>
+        <div class="modal-content">
+            <form class="form">
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // $('#myModal').modal('show');
+</script>
+
 <?php if (\helper\Visitor::isAftaa()): ?>
 
     <main id="app">
@@ -50,12 +68,16 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                         <h3 class="mt-3">
                             <span v-html="blockName"></span>
 
-                            <!--                        <a href="api/admin/block/edit" v-bind:data-id="block.id" v-on:click="editBlock"-->
-                            <!--                           class="ui-icon ui-icon-pencil">-->
-                            <!--                        </a>-->
+                            <a href="#" v-bind:data-id="block.id" v-on:click="editBlock"
+                               class="ui-icon ui-icon-pencil">
+                            </a>
 
                             <a href="#" v-bind:data-id="block.id" v-on:click="unlinkBlock"
                                class="ui-icon ui-icon-trash">
+                            </a>
+
+                            <a href="#" v-bind:data-id="block.id" v-on:click="addBlock"
+                               class="ui-icon ui-icon-plus">
                             </a>
                         </h3>
 
@@ -73,11 +95,11 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                                     <a v-bind:href="link.href" target="_blank" v-html="link.name"
                                        v-bind:data-id="link.id" v-on:click="conversion"></a>
                                 </td>
-                                <!--                            <td width="20">-->
-                                <!--                                <a href="api/admin/link/edit" v-bind:data-id="link.id" v-on:click="unlink"-->
-                                <!--                                   class="ui-icon ui-icon-pencil">-->
-                                <!--                                </a>-->
-                                <!--                            </td>-->
+                                <td width="20">
+                                    <a href="#" v-bind:data-id="link.id" v-on:click="editLink"
+                                       class="ui-icon ui-icon-pencil">
+                                    </a>
+                                </td>
                                 <td width="20">
                                     <a href="#" v-bind:data-id="link.id" v-on:click="unlinkLink"
                                        class="ui-icon ui-icon-trash">
@@ -85,6 +107,9 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                                 </td>
                             </tr>
                         </table>
+                        <a href="#" v-bind:data-id="block.id" v-on:click="addLink"
+                           class="ui-icon ui-icon-plus">
+                        </a>
 
                         <br>
 
@@ -101,6 +126,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
     <script>
         vm.loadAdminIndexData();
         vm.loadAdminTrashData();
+        // vm.blockList();
     </script>
 
 <?php endif ?>
