@@ -32,7 +32,7 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
     <main id="app">
         <div class="container">
 
-            <?php require 'include/login.php' ?>
+            <?php //require 'include/login.php' ?>
 
             <div class="row">
                 <div v-for="(column, colNum) in columns">

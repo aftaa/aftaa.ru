@@ -1,5 +1,3 @@
-тут будет логин
-
 <div v-if="status == 500" class="alert-danger">
     500 Internal Server Error
 </div>
