@@ -21,7 +21,7 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 </head>
 <body>
 
-<?php require_once 'include/header.php' ?>
+<?php //require_once 'include/header.php' ?>
 
 <main id="app">
     <div class="container">

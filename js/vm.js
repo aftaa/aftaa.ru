@@ -22,7 +22,7 @@ var vm = new Vue({
                 if (data.success) {
                     vm.columns = data.response.columns;
                 } else {
-                    vm.consoleErrorReport(data);
+                    vm.consoleErrorReport(data, textStatus);
                 }
             });
         },
