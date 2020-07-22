@@ -85,7 +85,7 @@ $isAdmin = $isAftaa;
             </div>
         <?php endif ?>
         <div class="col col-lg-2 col-sm-3">
-            <?php $view->render(['block' => $links['where I live']]) ?>
+            <?php $view->render(['block' => $links['where<br>I live']]) ?>
             <?php $view->render(['block' => $links['social networks']]) ?>
             <?php if ($isAftaa): ?>
                 <?php $view->render(['block' => $links['my']]) ?>
