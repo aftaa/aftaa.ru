@@ -1,4 +1,14 @@
-var vm = new Vue({
+let vmEditLink = new Vue({
+    el: '#appEditLink',
+    data: {
+        'name': '',
+        'href': '',
+        'icon': '',
+        'private': '',
+    },
+});
+
+let vm = new Vue({
     el: '#app',
     data: {
         api: 'https://api.aftaa.ru/api/',
@@ -9,6 +19,8 @@ var vm = new Vue({
         debug: true,
         requestDataFail: false,
         status: 200,
+
+        seen: true,
     },
     methods: {
         conversion: function (event) {
@@ -35,24 +47,28 @@ var vm = new Vue({
         loadExpertData: function () {
             let t = this;
 
-            $.get(t.api + 'data/expert-data', function (data) {
-                if (data.success) {
-                    t.columns = data.response.columns;
-                }
-            }).fail(function (jqXHR) {
-                t.consoleErrorReport(jqXHR.responseJSON);
-            });
-
             // load top columns
             $.get(this.api + 'link/top-links')
                 .done(function (data) {
                     if (data.success) {
                         t.topColumns = data.response.columns;
+                        $.get(t.api + 'data/expert-data', function (data) {
+                            if (data.success) {
+                                t.columns = data.response.columns;
+                            }
+                        }).fail(function (jqXHR) {
+                            t.seen = false;
+                            t.consoleErrorReport(jqXHR.responseJSON);
+                        });
                     }
                 })
                 .fail(function (jqXHR) {
+                    t.seen = false;
                     t.consoleErrorReport(jqXHR.responseJSON);
+                    // t.login();
                 });
+
+
         },
 
         /**
@@ -66,6 +82,7 @@ var vm = new Vue({
                     t.columns = data.response.columns;
                 }
             }).fail(function (jqXHR) {
+                t.seen = false;
                 t.consoleErrorReport(jqXHR.responseJSON);
             });
         },
@@ -81,6 +98,7 @@ var vm = new Vue({
                     t.trashColumns = data.response.columns;
                 }
             }).fail(function (jqXHR) {
+                t.seen = false;
                 t.consoleErrorReport(jqXHR.responseJSON);
             });
         },
@@ -125,7 +143,7 @@ var vm = new Vue({
                 $(event.target).parent().parent().fadeOut('slow');
                 vm.loadAdminTrashData();
             });
-            event.preventDefault();
+            event.preventDefaulrt();
         },
 
         /**
@@ -143,6 +161,17 @@ var vm = new Vue({
         },
 
         editLink: function (event) {
+            let t = this;
+            $.post(this.api + 'link/load-link', {id: event.target.dataset.id})
+                .done(function (data) {
+                    vmEditLink.data = data;
+                    $('#modal, #modal-overlay').show();
+                })
+                .fail(function (jqXHR) {
+                    t.consoleErrorReport(jqXHR.responseJSON);
+                })
+            ;
+
         },
         addLink: function (event) {
         },
@@ -177,6 +206,12 @@ var vm = new Vue({
                 console.error('Output:', response.output);
                 console.error('API status:', response.status);
             }
+        },
+
+        /**
+         * log in
+         */
+        login: function () {
         },
     },
 });

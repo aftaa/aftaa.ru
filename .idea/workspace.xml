@@ -6,8 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/modal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert.php" beforeDir="false" afterPath="$PROJECT_DIR$/expert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/admin-trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/admin-trash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +25,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="ProjectId" id="1TdplmkuHKbmNvbHAQ7qbFrf1Px" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,6 +56,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/favicons" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -92,7 +103,8 @@
       <workItem from="1595519144467" duration="3390000" />
       <workItem from="1595565937922" duration="201000" />
       <workItem from="1595566629690" duration="982000" />
-      <workItem from="1595568476472" duration="122000" />
+      <workItem from="1595568476472" duration="11305000" />
+      <workItem from="1595595339927" duration="4539000" />
     </task>
     <servers />
   </component>
@@ -137,6 +149,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="925" y="270" width="187" height="580" key="ftp.server.browser/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588721620400" />
+    <state x="593" y="253" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1595582411271">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="593" y="253" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/72.27.1294.741/1920.0.1440.900@72.27.1294.741" timestamp="1595582411271" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1595519175767">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

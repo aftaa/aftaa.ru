@@ -1,5 +1,5 @@
 
-<div class="container" v-if="trashColumns">
+<div class="container" v-if="trashColumns && seen">
     <hr size="1m">
     <h1><img src="image/recycle.png" width="64" height="64" alt=""> Recycle bin</h1>
 

@@ -20,8 +20,10 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="css/aftaa.css">
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="js/vue-2.6.11.js"></script>
 </head>
 
@@ -30,10 +32,8 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 <?php if (\helper\Visitor::isAftaa()): ?>
 
     <main id="app">
-        <div class="container">
-
+        <div class="container" v-if="seen">
             <?php //require 'include/login.php' ?>
-
             <div class="row">
                 <div class="col col-lg-2 col-sm-3">
                     <div class="alert-info"
@@ -48,9 +48,9 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
                         </div>
                     </div>
                     <br>
-                    <a href="https://twitter.com/intent/tweet?button_hashtag=aftaa&ref_src=twsrc%5Etfw"
-                       class="twitter-hashtag-button" data-show-count="false">Tweet #aftaa</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!--                    <a href="https://twitter.com/intent/tweet?button_hashtag=aftaa&ref_src=twsrc%5Etfw"-->
+<!--                       class="twitter-hashtag-button" data-show-count="false">Tweet #aftaa</a>-->
+<!--                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
 
                    <input type="text" value="128.0.142.30" id="ip" onclick="this.select()"
                           style="color: #a163f5; font-size: 12px; width: 100px; border-color: #a163f5; text-align: center; border-width: 1px; border-radius: 5px;">
@@ -80,6 +80,15 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 
 <?php endif ?>
 
+<!--<div id="dialog-message" title="Download complete">-->
+<!--    <p>-->
+<!--        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>-->
+<!--        Your files have downloaded successfully into the My Downloads folder.-->
+<!--    </p>-->
+<!--    <p>-->
+<!--        Currently using <b>36% of your storage space</b>.-->
+<!--    </p>-->
+<!--</div>-->
 
 <?php require_once 'include/footer.php' ?>
 <?php require_once 'include/yandex.metrika.html' ?>

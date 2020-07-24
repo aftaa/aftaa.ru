@@ -4,12 +4,6 @@
 require 'config/config.php';
 
 use builder\AdminIndexPageBuilder;use builder\IndexPageBuilder;
-use helper\Visitor;
-
-//if (!Visitor::isAftaa()) {
-//    header('Location: 403.shtml');
-//    exit;
-//}
 
 $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 
@@ -33,106 +27,118 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
     <link rel="stylesheet" href="css/jquery-ui-themes-1.12.1/themes/le-frog/jquery-ui.css">
     <link rel="stylesheet" href="css/jquery-ui-themes-1.12.1/themes/le-frog/theme.css">
 
+    <link rel="stylesheet" href="css/modal.css">
+
     <script src="js/aftaa.js"></script>
 </head>
 <body>
 
 <?php require_once 'include/header.php' ?>
 
-<!--<button type="button" data-toggle="modal" data-target="#myModal">Запустить модаль</button>-->
+<main id="app">
+    <div class="container">
+        <div class="row">
+            <div v-for="(column, colNum) in columns">
+                <div class="block col-sm-6 col-lg-4" v-for="(block, blockName) in column">
 
-<div id="myModal" class="odal ade bs-example-modal-sm" tabindex="-1" role="" aria-labelledby="mySmallModalLabel" aria-hidden="false">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-header">Добавить ссылку</div>
-        <div class="modal-content">
-            <form class="form">
+                    <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.private"></div>
+                    <h3 class="mt-3">
+                        <span v-html="blockName"></span>
 
-            </form>
-        </div>
-    </div>
-</div>
-
-<script>
-    // $('#myModal').modal('show');
-</script>
-
-<?php if (\helper\Visitor::isAftaa()): ?>
-
-    <main id="app">
-        <div class="container">
-            <div class="row">
-                <div v-for="(column, colNum) in columns">
-                    <div class="block col-sm-6 col-lg-4" v-for="(block, blockName) in column">
-
-                        <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.private"></div>
-                        <h3 class="mt-3">
-                            <span v-html="blockName"></span>
-
-                            <a href="#" v-bind:data-id="block.id" v-on:click="editBlock"
-                               class="ui-icon ui-icon-pencil">
-                            </a>
-
-                            <a href="#" v-bind:data-id="block.id" v-on:click="unlinkBlock"
-                               class="ui-icon ui-icon-trash">
-                            </a>
-
-                            <a href="#" v-bind:data-id="block.id" v-on:click="addBlock"
-                               class="ui-icon ui-icon-plus">
-                            </a>
-                        </h3>
-
-                        <table class="table-hover table-bordered">
-                            <tr v-for="link in block.links">
-                                <td>
-                                    <a v-bind:href="link.icon" target="_blank">
-                                        <img alt="" v-bind:src="link.icon" width="16" height="16">
-                                    </a>&nbsp;
-
-                                </td>
-                                <td>
-                                    <div class="ui-icon ui-icon-key private" v-if="link.private"></div>
-
-                                    <a v-bind:href="link.href" target="_blank" v-html="link.name"
-                                       v-bind:data-id="link.id" v-on:click="conversion"></a>
-                                </td>
-                                <td width="20">
-                                    <a href="#" v-bind:data-id="link.id" v-on:click="editLink"
-                                       class="ui-icon ui-icon-pencil">
-                                    </a>
-                                </td>
-                                <td width="20">
-                                    <a href="#" v-bind:data-id="link.id" v-on:click="unlinkLink"
-                                       class="ui-icon ui-icon-trash">
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                        <a href="#" v-bind:data-id="block.id" v-on:click="addLink"
-                           class="ui-icon ui-icon-plus">
+                        <a href="#" v-bind:data-id="block.id" v-on:click="editBlock"
+                           class="ui-icon ui-icon-pencil">
                         </a>
 
-                        <br>
+                        <a href="#" v-bind:data-id="block.id" v-on:click="unlinkBlock"
+                           class="ui-icon ui-icon-trash">
+                        </a>
 
-                    </div>
+                        <a href="#" v-bind:data-id="block.id" v-on:click="addBlock"
+                           class="ui-icon ui-icon-plus">
+                        </a>
+                    </h3>
+
+                    <table class="table-hover table-bordered">
+                        <tr v-for="link in block.links">
+                            <td>
+                                <a v-bind:href="link.icon" target="_blank">
+                                    <img alt="" v-bind:src="link.icon" width="16" height="16">
+                                </a>&nbsp;
+
+                            </td>
+                            <td>
+                                <div class="ui-icon ui-icon-key private" v-if="link.private"></div>
+
+                                <a v-bind:href="link.href" target="_blank" v-html="link.name"
+                                   v-bind:data-id="link.id" v-on:click="conversion"></a>
+                            </td>
+                            <td width="20">
+                                <a href="#" v-bind:data-id="link.id" v-on:click="editLink"
+                                   class="ui-icon ui-icon-pencil">
+                                </a>
+                            </td>
+                            <td width="20">
+                                <a href="#" v-bind:data-id="link.id" v-on:click="unlinkLink"
+                                   class="ui-icon ui-icon-trash">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <a href="#" v-bind:data-id="block.id" v-on:click="addLink"
+                       class="ui-icon ui-icon-plus">
+                    </a>
+
+                    <br>
+
                 </div>
             </div>
         </div>
+    </div>
 
-        <?php require_once 'include/admin-trash.php' ?>
+    <?php require_once 'include/admin-trash.php' ?>
 
-    </main>
-
-    <script src="js/vm.js"></script>
-    <script>
-        vm.loadAdminIndexData();
-        vm.loadAdminTrashData();
-        // vm.blockList();
-    </script>
-
-<?php endif ?>
-
+</main>
 
 <?php require_once 'include/footer.php' ?>
+<div class="modal" id="modal">
+    <!-- не скролиться -->
+<!--    <button class="class-button" id="close-button">Закрыть</button>-->
 
+
+    <div class="modal-guts">
+        <!--- скролиться -->
+        <h1>edit link</h1>
+
+        <form id="appEditLink">
+            <div class="form-control">Name: <input type="text" v-model="name" value=""></div>
+            <div class="form-control">Href: <input type="text" v-model="href" value=""></div>
+            <div class="form-control">Icon: <input type="text" v-model="icon" value=""></div>
+
+            <div class="form-control">
+                <label>
+                    Private:
+                    <input type="checkbox" v-model="private" value="1">
+                </label>
+            </div>
+        </form>
+
+    </div>
+</div>
+<div class="modal-overlay" id="modal-overlay"></div>
+
+<script src="js/vm.js"></script>
+<script>
+    vm.loadAdminIndexData();
+    vm.loadAdminTrashData();
+    // vm.blockList();
+</script>
+
+<script>
+    $('#modal-overlay').on('click', function(){
+        $('#modal, #modal-overlay').fadeOut('fast');
+    });
+
+    $('#modal, #modal-overlay').hide();
+</script>
 </body>
 </html>
