@@ -1,9 +1,11 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        api: 'http://api.aftaa.ru.local/api/',
+        api: 'https://api.aftaa.ru/api/',
         columns: {},
         trashColumns: {},
+        topColumns: {},
+
         debug: true,
         requestDataFail: false,
         status: 200,
@@ -40,6 +42,17 @@ var vm = new Vue({
             }).fail(function (jqXHR) {
                 t.consoleErrorReport(jqXHR.responseJSON);
             });
+
+            // load top columns
+            $.get(this.api + 'link/top-links')
+                .done(function (data) {
+                    if (data.success) {
+                        t.topColumns = data.response.columns;
+                    }
+                })
+                .fail(function (jqXHR) {
+                    t.consoleErrorReport(jqXHR.responseJSON);
+                });
         },
 
         /**
