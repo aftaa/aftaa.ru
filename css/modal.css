@@ -7,12 +7,12 @@
     width: 600px;
     max-width: 100%;
 
-    height: 400px;
+    height: 500px;
     max-height: 100%;
 
     z-index: 1010;
 
-    display: block;
+    display: none;
 }
 
 .modal-guts {
@@ -42,9 +42,11 @@
 
 .modal {
     background: #fff;
+    display: none;
 }
 
 .modal-overlay {
-    background: yellow;
+    background: #3d3644;
     opacity: .3;
+    display: none;
 }

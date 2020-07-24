@@ -100,33 +100,13 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 </main>
 
 <?php require_once 'include/footer.php' ?>
-<div class="modal" id="modal">
-    <!-- не скролиться -->
-<!--    <button class="class-button" id="close-button">Закрыть</button>-->
-
-
-    <div class="modal-guts">
-        <!--- скролиться -->
-        <h1>edit link</h1>
-
-        <form id="appEditLink">
-            <div class="form-control">Name: <input type="text" v-model="name" value=""></div>
-            <div class="form-control">Href: <input type="text" v-model="href" value=""></div>
-            <div class="form-control">Icon: <input type="text" v-model="icon" value=""></div>
-
-            <div class="form-control">
-                <label>
-                    Private:
-                    <input type="checkbox" v-model="private" value="1">
-                </label>
-            </div>
-        </form>
-
-    </div>
-</div>
+<?php require_once 'include/modal-link.php' ?>
+<?php require_once 'include/modal-block.php' ?>
 <div class="modal-overlay" id="modal-overlay"></div>
 
 <script src="js/vm.js"></script>
+<script src="js/vmEditLink.js"></script>
+<script src="js/vmBlock.js"></script>
 <script>
     vm.loadAdminIndexData();
     vm.loadAdminTrashData();
@@ -134,11 +114,15 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 </script>
 
 <script>
-    $('#modal-overlay').on('click', function(){
-        $('#modal, #modal-overlay').fadeOut('fast');
+    $('#modal-overlay').on('click', function () {
+        $('.modal, #modal-overlay').fadeOut('slow');
     });
 
-    $('#modal, #modal-overlay').hide();
+    $(document).on('keydown', function (e) {
+        if (e.keyCode == 27) {
+            $('.modal, #modal-overlay').hide();
+        }
+    });
 </script>
 </body>
 </html>

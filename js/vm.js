@@ -1,13 +1,3 @@
-let vmEditLink = new Vue({
-    el: '#appEditLink',
-    data: {
-        'name': '',
-        'href': '',
-        'icon': '',
-        'private': '',
-    },
-});
-
 let vm = new Vue({
     el: '#app',
     data: {
@@ -108,13 +98,7 @@ let vm = new Vue({
          * @param event
          */
         unlinkLink: function (event) {
-            let href = this.api + 'link/unlink-link';
-            let id = event.target.dataset.id;
-
-            $.post(href, {id: id}, function (data) {
-                $(event.target).parent().parent().fadeOut('slow');
-                vm.loadAdminTrashData();
-            });
+            vmEditLink.unlink(event.target.dataset.id);
             event.preventDefault();
         },
 
@@ -123,12 +107,7 @@ let vm = new Vue({
          * @param event
          */
         recoveryLink: function (event) {
-            let href = this.api + 'link/recovery-link';
-
-            $.post(href, {id: event.target.dataset.id}, function (data) {
-                vm.loadAdminIndexData();
-                vm.loadAdminTrashData();
-            });
+            vmEditLink.recovery(event.target.dataset.id);
             event.preventDefault();
         },
 
@@ -140,7 +119,7 @@ let vm = new Vue({
             let href = this.api + 'block/unlink-block';
 
             $.post(href, {id: event.target.dataset.id}, function (data) {
-                $(event.target).parent().parent().fadeOut('slow');
+                vm.loadAdminIndexData();
                 vm.loadAdminTrashData();
             });
             event.preventDefaulrt();
@@ -154,30 +133,34 @@ let vm = new Vue({
             let href = this.api + 'block/recovery-block';
 
             $.post(href, {id: event.target.dataset.id}, function (data) {
-                $(event.target).parent().parent().fadeOut();
                 vm.loadAdminIndexData();
+                vm.loadAdminTrashData();
             });
             event.preventDefault();
         },
 
         editLink: function (event) {
             let t = this;
-            $.post(this.api + 'link/load-link', {id: event.target.dataset.id})
+            let id = event.target.dataset.id;
+            $.post(this.api + 'link/load-link', {id: id})
                 .done(function (data) {
-                    vmEditLink.data = data;
-                    $('#modal, #modal-overlay').show();
+                    vmEditLink.init(id, data.response);
+                    $('#modalLink, #modal-overlay').show();
                 })
                 .fail(function (jqXHR) {
                     t.consoleErrorReport(jqXHR.responseJSON);
                 })
             ;
-
+            event.preventDefault();
         },
         addLink: function (event) {
         },
         addBlock: function (event) {
         },
         editBlock: function (event) {
+            let id = event.target.dataset.id;
+            vmBlock.load(id);
+            event.preventDefault();
         },
         blockList: function () {
             let t = this;
