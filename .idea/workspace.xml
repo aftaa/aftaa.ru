@@ -6,11 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9217f12e-9c58-4b40-bfe5-eeaf5248e5bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expert.php" beforeDir="false" afterPath="$PROJECT_DIR$/expert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vm.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +53,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -94,6 +91,8 @@
       <workItem from="1595421896154" duration="2044000" />
       <workItem from="1595519144467" duration="3390000" />
       <workItem from="1595565937922" duration="201000" />
+      <workItem from="1595566629690" duration="982000" />
+      <workItem from="1595568476472" duration="122000" />
     </task>
     <servers />
   </component>
@@ -112,6 +111,11 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/aftaa.ru" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="602" y="205" width="832" height="711" key="#SSH_Configurations" timestamp="1588721582850">
       <screen x="72" y="27" width="1848" height="1053" />
@@ -121,10 +125,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771507110" />
-    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1588771975989">
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1595568602234">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1588771975989" />
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1440.900@72.27.1848.1053" timestamp="1595568602234" />
     <state x="687" y="292" width="618" height="522" key="find.popup" timestamp="1595423268322">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
