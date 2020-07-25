@@ -8,7 +8,7 @@ use entity\IndexPage;
 /** IndexPage $thisPage */
 $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
 
-?><!DOCTYPE html>git add
+?><!DOCTYPE html>
 <html lang="ru">
 <head>
     <title><?= $thisPage->getTitle() ?></title>
