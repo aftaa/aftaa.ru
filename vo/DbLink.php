@@ -22,12 +22,12 @@ class DbLink extends Link
      * @param string $name
      * @param string $href
      * @param bool|null $private
-     * @param IFavicon $icon
+     * @param $icon
      * @param $id
      */
-    public function __construct(string $name, string $href, ?bool $private, IFavicon $icon, $id)
+    public function __construct(string $name, string $href, bool $private, $icon)
     {
-        parent::__construct($name, $href, $private, $icon);
+        parent::__construct($name, $href, $private, $icon, $id);
         $this->id = $id;
         $this->is_guest = !Visitor::isAftaa();
     }

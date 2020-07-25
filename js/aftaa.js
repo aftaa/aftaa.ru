@@ -1,10 +1,10 @@
 $(function () {
-    $('a.view').on('click', function () {
-        console.info(this.dataset.linkId);
-        $.get('/view.php', {linkId: this.dataset.linkId});
-    });
+    $('.close').parent().fadeOut();
 
-    $('#copy').on('click', function () {
-
-    });
+    var ms = function (text) {
+        $('div.system-message span.text').html(text).slideDown();
+    }
+    var me = function (text) {
+        $('div.system-message.error span.text').html(text).slideDown();
+    }
 });

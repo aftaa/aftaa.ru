@@ -14,7 +14,7 @@ class IconFactory
      *
      * @return Icon|null
      */
-    public static function getIcon($icon, string $href): ?Icon
+    public static function getIcon($icon, string $href)
     {
         if ("auto" == $icon) {
             return new Favicon($href);

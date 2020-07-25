@@ -7,23 +7,28 @@ use vo\LinkInterface;
 
 class LinkBlock
 {
-    /** @var string */
-    private $name = '';
+    public $name = '';
 
     /** @var LinkInterface[] */
-    protected $links = [];
+    public $links = [];
+
+    /** @var int */
+    public $count = 0;
+
+    /** @var int  */
+    public $colNum = 0;
 
     /**
      * LinkBlock constructor.
-     *
      * @param string $name
-     * @param LinkInterface[]|null $links
+     * @param null $links
      */
-    public function __construct(string $name, ?array $links)
+    public function __construct($name, $colNum, $links = null)
     {
         $this->name = $name;
+        $this->colNum = $colNum;
         if (null !== $links) {
-            $this->links = $links;
+            $this->count = count($links);
         }
     }
 
@@ -31,10 +36,10 @@ class LinkBlock
     /**
      * @param LinkInterface $link
      */
-    public function addLink(LinkInterface $link): void
+    public function addLink(LinkInterface $link)
     {
         $this->links[$link->getName()] = $link;
-//        echo '<pre>'; print_r($this->links[$link->getName()]); echo '</pre>'; die;
+        $this->count++;
     }
 
     /**
@@ -50,8 +55,7 @@ class LinkBlock
      */
     public function getLinks(): array
     {
-        $links = $this->ksort();
-        return $links;
+        return $this->ksort();
     }
 
     /**

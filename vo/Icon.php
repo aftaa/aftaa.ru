@@ -13,7 +13,7 @@ use strategy\LinkPrivateStrategy;
 class Icon implements IFavicon
 {
     /** @var string */
-    private $href = '';
+    public $href = '';
 
     /**
      * Icon constructor.

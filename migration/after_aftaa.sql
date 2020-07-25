@@ -63,7 +63,7 @@ CREATE TABLE `link` (
 -- Дамп данных таблицы `link`
 --
 
-INSERT INTO `link` (`id`, `link_block_id`, `name`, `href`, `private`, `icon`) VALUES
+INSERT INTO `link` (`id`, block_id, `name`, `href`, `private`, `icon`) VALUES
 (1, 1, '108674608', 'https://web.icq.com/', 0, '/favicons/108674608.ico'),
 (2, 2, 'paypal', 'https://www.paypal.com/ru/signin', 0, '/favicons/paypal.ico'),
 (3, 2, 'pkb', 'https://my.collector.ru/signin', 0, '/favicons/pkb.png'),
@@ -1357,7 +1357,7 @@ ALTER TABLE `bank_card`
 --
 ALTER TABLE `link`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_link_block_id` (`link_block_id`) USING BTREE;
+  ADD KEY `FK_link_block_id` (block_id) USING BTREE;
 
 --
 -- Индексы таблицы `link_block`
@@ -1423,7 +1423,7 @@ ALTER TABLE `user`
 -- Ограничения внешнего ключа таблицы `link`
 --
 ALTER TABLE `link`
-  ADD CONSTRAINT `FK_link_link` FOREIGN KEY (`link_block_id`) REFERENCES `link_block` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_link_link` FOREIGN KEY (block_id) REFERENCES `link_block` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `link_view`
