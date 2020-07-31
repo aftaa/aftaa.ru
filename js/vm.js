@@ -122,7 +122,7 @@ let vm = new Vue({
                 vm.loadAdminIndexData();
                 vm.loadAdminTrashData();
             });
-            event.preventDefaulrt();
+            event.preventDefault();
         },
 
         /**
@@ -157,6 +157,7 @@ let vm = new Vue({
             vmEditLink.addLink(event);
         },
         addBlock: function (event) {
+            vmBlock.addBlock();
         },
         editBlock: function (event) {
             let id = event.target.dataset.id;

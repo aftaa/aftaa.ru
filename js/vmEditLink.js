@@ -57,7 +57,6 @@ let vmEditLink = new Vue({
                     vm.consoleErrorReport(jqXHR.responseJSON);
                 })
             ;
-            event.preventDefault();
         },
 
         saveLink: function (event) {

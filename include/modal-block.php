@@ -14,7 +14,7 @@
                 </label>
             </div>
 
-            <button type="submit" class="btn btn-primary" v-on:click="saveBlock">Save block</button>
+            <button type="submit" class="btn btn-primary" v-on:click="saveBlock">submit</button>
         </form>
 
     </div>

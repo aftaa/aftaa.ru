@@ -29,7 +29,62 @@ let vmBlock = new Vue({
         },
 
         saveBlock: function(event) {
+            if (null === this.id) {
+                this.createBlock();
+            }
+
+            $.post(vm.api + 'block/save-block', {
+                'name': this.name,
+                'col_num': this.col_num,
+                'sort': this.sort,
+                'private': this.private || 0,
+                'id': this.id,
+            })
+                .done(function (data) {
+                    if (data.success) {
+                        vm.loadAdminIndexData();
+                        $('#modalBlock, #modal-overlay').hide();
+                    } else {
+                        console.log(data.exception)
+                        vm.consoleErrorReport(data);
+                    }
+                })
+                .fail(function (jqXHR) {
+                    vm.consoleErrorReport(jqXHR.responseJSON);
+                })
+            ;
             event.preventDefault();
-        }
-    }
+        },
+
+        addBlock: function () {
+            this.id = null;
+            this.col_num = '';
+            this.name = '';
+            this.sort = '';
+            this.private = false;
+            $('#modalBlock, #modal-overlay').slideDown('slow');
+        },
+
+        createBlock: function () {
+            $.post(vm.api + 'block/add-block', {
+                'name': this.name,
+                'col_num': this.col_num,
+                'sort': this.sort,
+                'private': this.private || 0,
+            })
+                .done(function (data) {
+                    if (data.success) {
+                        vm.loadAdminIndexData();
+                        $('#modalBlock, #modal-overlay').slideUp('slow');
+                    } else {
+                        console.log(data.exception)
+                        vm.consoleErrorReport(data);
+                    }
+                })
+                .fail(function (jqXHR) {
+                    vm.consoleErrorReport(jqXHR.responseJSON);
+                })
+            ;
+        },
+    },
 });

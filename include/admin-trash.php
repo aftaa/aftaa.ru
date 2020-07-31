@@ -23,7 +23,7 @@
                             </a>&nbsp;
                         </td>
                         <td>
-                            <a v-bind:href="link.href" target="_blank" v-html="link.name"
+                            <a v-bind:href="link.href" target="_blank" v-html="link.id + ': ' + link.name"
                                v-bind:data-id="link.id" v-on:click="conversion"></a>
                         </td>
                         <td width="20">
