@@ -22,7 +22,7 @@
                 </label>
             </div>
 
-            <button type="submit" class="btn btn-primary" v-on:click="saveLink">Save link</button>
+            <button type="submit" class="btn btn-primary" v-on:click="saveLink">SUBMIT</button>
         </form>
 
     </div>

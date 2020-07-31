@@ -154,6 +154,7 @@ let vm = new Vue({
             event.preventDefault();
         },
         addLink: function (event) {
+            vmEditLink.addLink(event);
         },
         addBlock: function (event) {
         },
@@ -171,7 +172,7 @@ let vm = new Vue({
             });
         },
 
-        consoleErrorReport: function (response, textStatus) {
+        consoleErrorReport: function (response) {
 
 
             if (response.exception) {

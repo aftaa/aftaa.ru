@@ -1,5 +1,5 @@
 let vmEditLink = new Vue({
-    el: '#appEditLink',
+    el: '#appEditLink', // include/modal-link.php
     data: {
         'id': null,
 
@@ -8,6 +8,7 @@ let vmEditLink = new Vue({
         'href': '',
         'icon': '',
         'private': false,
+
 
         'blocks': {},
     },
@@ -25,21 +26,62 @@ let vmEditLink = new Vue({
         },
 
 
+        addLink: function (event) {
+            this.id = null;
+            this.block_id = event.target.dataset.blockId; // TODO
+            this._loadBlocks();
+            this.name = this.href = this.icon = '';
+            this.private = false;
+            $('#modalLink, #modal-overlay').slideDown('slow');
+        },
 
+
+        createLink: function () {
+            $.post(vm.api + 'link/add-link', {
+                'block_id': this.block_id,
+                'name': this.name,
+                'href': this.href,
+                'icon': this.icon,
+                'private': this.private || 0,
+            })
+                .done(function (data) {
+                    if (data.success) {
+                        vm.loadAdminIndexData();
+                        $('#modalLink, #modal-overlay').slideUp('slow');
+                    } else {
+                        console.log(data.exception)
+                        vm.consoleErrorReport(data);
+                    }
+                })
+                .fail(function (jqXHR) {
+                    vm.consoleErrorReport(jqXHR.responseJSON);
+                })
+            ;
+            event.preventDefault();
+        },
 
         saveLink: function (event) {
+
+            if (null === this.id) {
+                this.createLink();
+            }
 
             $.post(vm.api + 'link/save-link', {
                 'block_id': this.block_id,
                 'name': this.name,
                 'href': this.href,
                 'icon': this.icon,
-                'private': this.private,
+                'private': this.private || 0,
                 'id': this.id,
             })
-                .done(function () {
-                    vm.loadAdminIndexData();
-                    $('#modalLink, #modal-overlay').hide();
+                .done(function (data) {
+                    if (data.success) {
+                        vm.loadAdminIndexData();
+                        $('#modalLink, #modal-overlay').hide();
+                    } else {
+                        console.log(data.exception)
+                        vm.consoleErrorReport(data);
+                    }
                 })
                 .fail(function (jqXHR) {
                     vm.consoleErrorReport(jqXHR.responseJSON);
@@ -51,10 +93,7 @@ let vmEditLink = new Vue({
         },
 
 
-
-
-
-        unlink: function(id) {
+        unlink: function (id) {
             let href = vm.api + 'link/unlink-link';
             $.post(href, {id: id}, function () {
                 vm.loadAdminIndexData();
@@ -64,7 +103,7 @@ let vmEditLink = new Vue({
         },
 
 
-        recovery: function(id) {
+        recovery: function (id) {
             let href = vm.api + 'link/recovery-link';
             $.post(href, {id: id}, function () {
                 vm.loadAdminIndexData();
@@ -72,7 +111,6 @@ let vmEditLink = new Vue({
             });
 
         },
-
 
 
         _loadBlocks: function () {

@@ -48,12 +48,12 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
                         </div>
                     </div>
                     <br>
-<!--                    <a href="https://twitter.com/intent/tweet?button_hashtag=aftaa&ref_src=twsrc%5Etfw"-->
-<!--                       class="twitter-hashtag-button" data-show-count="false">Tweet #aftaa</a>-->
-<!--                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+                    <!--                    <a href="https://twitter.com/intent/tweet?button_hashtag=aftaa&ref_src=twsrc%5Etfw"-->
+                    <!--                       class="twitter-hashtag-button" data-show-count="false">Tweet #aftaa</a>-->
+                    <!--                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
 
-                   <input type="text" value="128.0.142.30" id="ip" onclick="this.select()"
-                          style="color: #a163f5; font-size: 12px; width: 100px; border-color: #a163f5; text-align: center; border-width: 1px; border-radius: 5px;">
+                    <input type="text" value="128.0.142.30" id="ip" onclick="this.select()"
+                           style="color: #a163f5; font-size: 12px; width: 100px; border-color: #a163f5; text-align: center; border-width: 1px; border-radius: 5px;">
                 </div>
 
 

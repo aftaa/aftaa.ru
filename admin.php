@@ -84,7 +84,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                             </td>
                         </tr>
                     </table>
-                    <a href="#" v-bind:data-id="block.id" v-on:click="addLink"
+                    <a href="#" v-bind:data-block-id="block.id" v-on:click="addLink"
                        class="ui-icon ui-icon-plus">
                     </a>
 
