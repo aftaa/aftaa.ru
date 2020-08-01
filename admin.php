@@ -58,7 +58,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                         </a>
                     </h3>
 
-                    <table class="table-hover table-bordered">
+                    <table class="table-hover table-striped">
                         <tr v-for="link in block.links">
                             <td>
                                 <a v-bind:href="link.icon" target="_blank">
@@ -69,8 +69,8 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                             <td>
                                 <div class="ui-icon ui-icon-key private" v-if="link.private"></div>
 
-                                <a v-bind:href="link.href" target="_blank" v-html="link.id + ': ' + link.name"
-                                   v-bind:data-id="link.id" v-on:click="conversion"></a>
+                                <a v-bind:href="link.href" target="_blank" v-html="link.name"
+                                   v-bind:data-id="link.id" v-on:click="conversion" v-bind:title="link.id"></a>
                             </td>
                             <td width="20">
                                 <a href="#" v-bind:data-id="link.id" v-on:click="editLink"
