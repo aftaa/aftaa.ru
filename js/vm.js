@@ -157,7 +157,7 @@ let vm = new Vue({
             vmEditLink.addLink(event);
         },
         addBlock: function (event) {
-            vmBlock.addBlock();
+            vmBlock.addBlock(event.target.dataset.colNum);
         },
         editBlock: function (event) {
             let id = event.target.dataset.id;

@@ -27,8 +27,12 @@ let vmEditLink = new Vue({
 
 
         addLink: function (event) {
+
+            if (event) {
+                this.block_id = event.target.dataset.blockId;
+            }
+
             this.id = null;
-            this.block_id = event.target.dataset.blockId; // TODO
             this._loadBlocks();
             this.name = this.href = this.icon = '';
             this.private = false;
@@ -76,7 +80,7 @@ let vmEditLink = new Vue({
                 .done(function (data) {
                     if (data.success) {
                         vm.loadAdminIndexData();
-                        $('#modalLink, #modal-overlay').hide();
+                        vmLib.hideModal();
                     } else {
                         console.log(data.exception)
                         vm.consoleErrorReport(data);
@@ -122,6 +126,27 @@ let vmEditLink = new Vue({
                 .fail(function (jqXHR) {
                     vm.consoleErrorReport(jqXHR.responseJSON);
                 })
+        },
+
+        loadFavicon: function (event) {
+            let url = vm.api + 'link/get-favicon';
+            let t = this;
+            $.post(url, {name: this.name, origin: this.icon})
+                .done(function (data) {
+                    if (data.success) {
+                        t.icon = data.response;
+                        t.saveLink(event);
+                        vm.loadAdminIndexData();
+                    } else {
+                        console.log(data.exception)
+                        vm.consoleErrorReport(data);
+                    }
+
+                })
+                .fail(function (jqXHR) {
+                    vm.consoleErrorReport(jqXHR.responseJSON);
+                })
+            event.preventDefault();
         }
     },
 });

@@ -56,9 +56,9 @@ let vmBlock = new Vue({
             event.preventDefault();
         },
 
-        addBlock: function () {
+        addBlock: function (colNum) {
             this.id = null;
-            this.col_num = '';
+            this.col_num = colNum;
             this.name = '';
             this.sort = '';
             this.private = false;
@@ -75,6 +75,11 @@ let vmBlock = new Vue({
                 .done(function (data) {
                     if (data.success) {
                         vm.loadAdminIndexData();
+
+                        let link = vmEditLink;
+                        link.block_id = data.response;
+                        link.addLink();
+
                         $('#modalBlock, #modal-overlay').slideUp('slow');
                     } else {
                         console.log(data.exception)

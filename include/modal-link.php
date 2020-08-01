@@ -1,8 +1,10 @@
 <div class="modal" id="modalLink" tabindex="-1">
     <div class="modal-guts">
-        <h3>add/edit link</h3>
 
         <form id="appEditLink">
+            <h3>add/edit link
+                <img v-bind:src="'https://api.aftaa.ru' + icon" alt="" style="max-width: 36px; max-height: 36px;">
+            </h3>
             <div class="form-group">
                 Block:<br>
                 <select v-model="block_id" class="form-control" required>
@@ -13,7 +15,10 @@
             </div>
             <div class="form-group">Name: <br><input class="form-control" type="text" v-model="name" value=""></div>
             <div class="form-group">Href: <br><input class="form-control" type="text" v-model="href" value=""></div>
-            <div class="form-group">Icon: <br><input class="form-control" type="text" v-model="icon" value=""></div>
+            <div class="form-group">Icon: <br><input class="form-control" type="text" v-model="icon" value="">
+                <small><a href="#" v-on:click="loadFavicon">загрузить на хост</a></small>
+            </div>
+
 
             <div class="form-group">
                 <label>

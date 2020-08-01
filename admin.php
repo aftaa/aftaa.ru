@@ -53,7 +53,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                            class="ui-icon ui-icon-trash">
                         </a>
 
-                        <a href="#" v-bind:data-id="block.id" v-on:click="addBlock"
+                        <a href="#" v-bind:data-col-num="colNum" v-on:click="addBlock"
                            class="ui-icon ui-icon-plus">
                         </a>
                     </h3>
@@ -105,6 +105,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 <div class="modal-overlay" id="modal-overlay"></div>
 
 <script src="js/vm.js"></script>
+<script src="js/vmLib.js"></script>
 <script src="js/vmEditLink.js"></script>
 <script src="js/vmBlock.js"></script>
 <script>
