@@ -5,12 +5,12 @@
 
     <div class="row">
         <div v-for="(column, colNum) in trashColumns">
-            <div class="block col-sm-6 col-lg-4" v-bind:class="{ dropped: block.deleted }" v-for="(block, blockName) in column">
+            <div class="block col-sm-6 col-lg-4" v-bind:class="{ dropped: block.block_deleted }" v-for="(block, blockName) in column">
 
-                <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.private"></div>
+                <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.block_private"></div>
                 <h3 class="mt-3">
                     <span v-html="blockName"></span>
-                    <a href="#" v-bind:data-id="block.id" v-on:click="recoveryBlock"
+                    <a href="#" v-bind:data-id="block.block_id" v-on:click="recoveryBlock"
                        class="ui-icon ui-icon-arrow-1-e-w">
                     </a>
                 </h3>

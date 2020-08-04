@@ -111,9 +111,9 @@ let vm = new Vue({
          * @param event
          */
         unlinkBlock: function (event) {
-            let href = this.api + 'block/unlink-block';
+            let href = this.api + 'block/remove/' + event.target.dataset.id;
 
-            $.post(href, {id: event.target.dataset.id}, function (data) {
+            $.post(href, function (data) {
                 vm.loadAdminIndexData();
                 vm.loadAdminTrashData();
             });
@@ -125,9 +125,9 @@ let vm = new Vue({
          * @param event
          */
         recoveryBlock: function (event) {
-            let href = this.api + 'block/recovery-block';
+            let href = this.api + 'block/restore/' + event.target.dataset.id;
 
-            $.post(href, {id: event.target.dataset.id}, function (data) {
+            $.post(href, function (data) {
                 vm.loadAdminIndexData();
                 vm.loadAdminTrashData();
             });

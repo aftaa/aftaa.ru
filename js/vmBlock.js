@@ -10,17 +10,15 @@ let vmBlock = new Vue({
     'methods': {
         load: function (id) {
             this.id = id;
-            let api = vm.api + 'block/load-block';
+            let api = vm.api + 'block/' + id;
             let t = this;
-            $.post(api, {id: id})
+            $.post(api)
                 .done(function (data) {
-                    data = data.response;
                     t.name = data.name;
                     t.col_num = data.col_num;
                     t.sort = data.sort;
                     t.private = parseInt(data.private);
-
-                    $('#modalBlock, #modal-overlay').show();
+                    $('#modalBlock, #modal-overlay').fadeIn('slow');
                 })
                 .fail(function (jsXHR) {
                     vm.consoleErrorReport(jsXHR.responseJSON);
@@ -31,6 +29,8 @@ let vmBlock = new Vue({
         saveBlock: function(event) {
             if (null === this.id) {
                 this.createBlock();
+                event.preventDefault();
+                return;
             }
 
             $.post(vm.api + 'block/save-block', {

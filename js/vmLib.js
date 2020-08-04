@@ -8,7 +8,7 @@ const vmLib = {
         vmLib.hideModal();
     },
 
-    failMsg(): function(jqXHR) {
+    failMsg: function(jqXHR) {
         $('#error').html(jqXHR.responseText);
     }
 

@@ -43,15 +43,15 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
             <div v-for="(column, colNum) in columns">
                 <div class="block col-sm-6 col-lg-4" v-for="(block, blockName) in column">
 
-                    <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.private"></div>
+                    <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.block_private"></div>
                     <h3 class="mt-3">
                         <span v-html="blockName"></span>
 
-                        <a href="#" v-bind:data-id="block.id" v-on:click="editBlock"
+                        <a href="#" v-bind:data-id="block.block_id" v-on:click="editBlock"
                            class="ui-icon ui-icon-pencil">
                         </a>
 
-                        <a href="#" v-bind:data-id="block.id" v-on:click="unlinkBlock"
+                        <a href="#" v-bind:data-id="block.block_id" v-on:click="unlinkBlock"
                            class="ui-icon ui-icon-trash">
                         </a>
 

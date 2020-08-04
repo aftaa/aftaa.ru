@@ -62,6 +62,8 @@ let vmEditLink = new Vue({
 
             if (null === this.id) {
                 this.createLink();
+                event.preventDefault();
+                return;
             }
 
             $.post(vm.api + 'link/save', {
@@ -74,7 +76,7 @@ let vmEditLink = new Vue({
             })
                 .done(function () {
                     vm.loadAdminIndexData();
-                    vmLib.hideModal();
+                    $('#modalLink, #modal-overlay').fadeOut('slow');
                 })
                 .fail(function (jqXHR) {
                     $('#error').html(jqXHR.responseText);
@@ -87,8 +89,8 @@ let vmEditLink = new Vue({
 
 
         unlink: function (id) {
-            let href = vm.api + 'link/unlink-link';
-            $.post(href, {id: id}, function () {
+            let href = vm.api + 'link/remove/' + id;
+            $.post(href, function () {
                 vm.loadAdminIndexData();
                 vm.loadAdminTrashData();
             });
@@ -97,8 +99,8 @@ let vmEditLink = new Vue({
 
 
         recovery: function (id) {
-            let href = vm.api + 'link/recovery-link';
-            $.post(href, {id: id}, function () {
+            let href = vm.api + 'link/restore/' + id;
+            $.post(href, function () {
                 vm.loadAdminIndexData();
                 vm.loadAdminTrashData();
             });
