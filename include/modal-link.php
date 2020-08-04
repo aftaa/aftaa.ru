@@ -3,7 +3,7 @@
 
         <form id="appEditLink">
             <h3>add/edit link
-                <img v-bind:src="'https://api.aftaa.ru' + icon" alt="" style="max-width: 36px; max-height: 36px;">
+                <img v-bind:src="icon" alt="" style="max-width: 36px; max-height: 36px;">
             </h3>
             <div class="form-group">
                 Block:<br>

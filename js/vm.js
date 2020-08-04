@@ -137,9 +137,9 @@ let vm = new Vue({
         editLink: function (event) {
             let t = this;
             let id = event.target.dataset.id;
-            $.post(this.api + 'link/load-link', {id: id})
-                .done(function (data) {
-                    vmEditLink.init(id, data.response);
+            $.post(this.api + 'link/' + id)
+                .done(function (link) {
+                    vmEditLink.init(id, link);
                     $('#modalLink, #modal-overlay').show();
                 })
                 .fail(function (jqXHR) {

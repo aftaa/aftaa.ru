@@ -14,13 +14,13 @@ let vmEditLink = new Vue({
     },
 
     methods: {
-        init: function (id, response) {
+        init: function (id, link) {
             this.id = id;
-            this.block_id = response.block_id;
-            this.name = response.name;
-            this.href = response.href;
-            this.icon = response.icon;
-            this.private = parseInt(response.private);
+            this.block_id = link.block_id;
+            this.name = link.name;
+            this.href = link.href;
+            this.icon = link.icon;
+            this.private = parseInt(link.private);
 
             this._loadBlocks();
         },
@@ -41,24 +41,19 @@ let vmEditLink = new Vue({
 
 
         createLink: function () {
-            $.post(vm.api + 'link/add-link', {
+            $.post(vm.api + 'link/add', {
                 'block_id': this.block_id,
                 'name': this.name,
                 'href': this.href,
                 'icon': this.icon,
                 'private': this.private || 0,
             })
-                .done(function (data) {
-                    if (data.success) {
-                        vm.loadAdminIndexData();
-                        $('#modalLink, #modal-overlay').slideUp('slow');
-                    } else {
-                        console.log(data.exception)
-                        vm.consoleErrorReport(data);
-                    }
+                .done(function () {
+                    vm.loadAdminIndexData();
+                    vmLib.hideModal();
                 })
                 .fail(function (jqXHR) {
-                    vm.consoleErrorReport(jqXHR.responseJSON);
+                    vmLib.failMsg(jqXHR);
                 })
             ;
         },
@@ -69,7 +64,7 @@ let vmEditLink = new Vue({
                 this.createLink();
             }
 
-            $.post(vm.api + 'link/save-link', {
+            $.post(vm.api + 'link/save', {
                 'block_id': this.block_id,
                 'name': this.name,
                 'href': this.href,
@@ -77,17 +72,12 @@ let vmEditLink = new Vue({
                 'private': this.private || 0,
                 'id': this.id,
             })
-                .done(function (data) {
-                    if (data.success) {
-                        vm.loadAdminIndexData();
-                        vmLib.hideModal();
-                    } else {
-                        console.log(data.exception)
-                        vm.consoleErrorReport(data);
-                    }
+                .done(function () {
+                    vm.loadAdminIndexData();
+                    vmLib.hideModal();
                 })
                 .fail(function (jqXHR) {
-                    vm.consoleErrorReport(jqXHR.responseJSON);
+                    $('#error').html(jqXHR.responseText);
                 })
             ;
 
@@ -119,9 +109,9 @@ let vmEditLink = new Vue({
         _loadBlocks: function () {
             let t = this;
 
-            $.get(vm.api + 'block/blocks-list')
+            $.get(vm.api + 'blocks')
                 .done(function (data) {
-                    t.blocks = data.response;
+                    t.blocks = data;
                 })
                 .fail(function (jqXHR) {
                     vm.consoleErrorReport(jqXHR.responseJSON);

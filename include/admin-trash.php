@@ -24,10 +24,10 @@
                         </td>
                         <td>
                             <a v-bind:href="link.href" target="_blank" v-html="link.link_id + ': ' + link.link_name"
-                               v-bind:data-id="link.id" v-on:click="conversion"></a>
+                               v-bind:data-id="link.link_id" v-on:click="conversion"></a>
                         </td>
                         <td width="20">
-                            <a href="#" v-bind:data-id="link.id" v-on:click="recoveryLink"
+                            <a href="#" v-bind:data-id="link.link_id" v-on:click="recoveryLink"
                                class="ui-icon ui-icon-arrow-1-e-w">
                             </a>
                         </td>

@@ -35,6 +35,8 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 
 <?php require_once 'include/header.php' ?>
 
+<div id="error" class="error"></div>
+
 <main id="app">
     <div class="container">
         <div class="row">
@@ -70,21 +72,21 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
                                 <div class="ui-icon ui-icon-key private" v-if="link.private"></div>
 
                                 <a v-bind:href="link.href" target="_blank" v-html="link.link_name"
-                                   v-bind:data-id="link.id" v-on:click="conversion" v-bind:title="link.id"></a>
+                                   v-bind:data-id="link.link_id" v-on:click="conversion" v-bind:title="link.id"></a>
                             </td>
                             <td width="20">
-                                <a href="#" v-bind:data-id="link.id" v-on:click="editLink"
+                                <a href="#" v-bind:data-id="link.link_id" v-on:click="editLink"
                                    class="ui-icon ui-icon-pencil">
                                 </a>
                             </td>
                             <td width="20">
-                                <a href="#" v-bind:data-id="link.id" v-on:click="unlinkLink"
+                                <a href="#" v-bind:data-id="link.link_id" v-on:click="unlinkLink"
                                    class="ui-icon ui-icon-trash">
                                 </a>
                             </td>
                         </tr>
                     </table>
-                    <a href="#" v-bind:data-block-id="block.id" v-on:click="addLink"
+                    <a href="#" v-bind:data-block-id="block.block_id" v-on:click="addLink"
                        class="ui-icon ui-icon-plus">
                     </a>
 
@@ -125,5 +127,6 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
         }
     });
 </script>
+
 </body>
 </html>
