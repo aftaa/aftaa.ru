@@ -37,7 +37,7 @@ let vm = new Vue({
             let t = this;
 
             // load top columns
-            $.get(this.api + 'data/top')
+            $.get(this.api + 'data/expert/top')
                 .done(function (response) {
                     t.topColumns = response.data;
                     $.get(t.api + 'data/expert', function (response) {
@@ -65,10 +65,9 @@ let vm = new Vue({
         loadAdminIndexData: function (data) {
             let t = this;
 
-            $.get(t.api + 'data/admin-data', function (data) {
-                if (data.success) {
-                    t.columns = data.response.columns;
-                }
+            $.get(t.api + 'data/admin', function (response) {
+                t.columns = response.data;
+
             }).fail(function (jqXHR) {
                 t.seen = false;
                 t.consoleErrorReport(jqXHR.responseJSON);
@@ -81,10 +80,8 @@ let vm = new Vue({
         loadAdminTrashData: function () {
             let t = this;
 
-            $.get(t.api + 'data/trash-data', function (data) {
-                if (data.success) {
-                    t.trashColumns = data.response.columns;
-                }
+            $.get(t.api + 'data/admin/trash', function (response) {
+                t.trashColumns = response.data;
             }).fail(function (jqXHR) {
                 t.seen = false;
                 t.consoleErrorReport(jqXHR.responseJSON);
