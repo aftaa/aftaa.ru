@@ -1,7 +1,7 @@
 let vm = new Vue({
     el: '#app',
     data: {
-        api: 'https://api.aftaa.ru/api/',
+        api: 'https://v2.api.aftaa.ru/',
         columns: {},
         trashColumns: {},
         topColumns: {},
@@ -22,13 +22,12 @@ let vm = new Vue({
          * Get index elements for all.
          */
         loadIndexData: function () {
-            $.get(this.api + 'data/index-data', function (data, textStatus, jqXHR) {
-                if (data.success) {
-                    vm.columns = data.response.columns;
-                } else {
-                    vm.consoleErrorReport(data, textStatus);
-                }
-            });
+            let url = this.api + 'data/index';
+            $.get(url)
+                .done(function (response) {
+                    vm.columns = response.data;
+                })
+            ;
         },
 
         /**
@@ -38,19 +37,18 @@ let vm = new Vue({
             let t = this;
 
             // load top columns
-            $.get(this.api + 'link/top-links')
-                .done(function (data) {
-                    if (data.success) {
-                        t.topColumns = data.response.columns;
-                        $.get(t.api + 'data/expert-data', function (data) {
-                            if (data.success) {
-                                t.columns = data.response.columns;
-                            }
-                        }).fail(function (jqXHR) {
+            $.get(this.api + 'data/top')
+                .done(function (response) {
+                    t.topColumns = response.data;
+                    $.get(t.api + 'data/expert', function (response) {
+                        //if (data.success) {
+                        t.columns = response.data;
+                        //}
+                    })/*.fail(function (jqXHR) {
                             t.seen = false;
                             t.consoleErrorReport(jqXHR.responseJSON);
-                        });
-                    }
+                        })*/
+                    ;
                 })
                 .fail(function (jqXHR) {
                     t.seen = false;
