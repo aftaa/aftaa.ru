@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label>
                     Private:
-                    <input type="checkbox" v-model="private" true-value="1" false-value="0">
+                    <input type="checkbox" v-model="private">
                 </label>
             </div>
 

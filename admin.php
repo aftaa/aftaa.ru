@@ -69,7 +69,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 
                             </td>
                             <td>
-                                <div class="ui-icon ui-icon-key private" v-if="link.private"></div>
+                                <div class="ui-icon ui-icon-key private" v-if="link.link_private"></div>
 
                                 <a v-bind:href="link.href" target="_blank" v-html="link.link_name"
                                    v-bind:data-id="link.link_id" v-on:click="conversion" v-bind:title="link.id"></a>

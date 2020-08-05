@@ -20,7 +20,7 @@ let vmEditLink = new Vue({
             this.name = link.name;
             this.href = link.href;
             this.icon = link.icon;
-            this.private = parseInt(link.private);
+            this.private = link.private;
 
             this._loadBlocks();
         },

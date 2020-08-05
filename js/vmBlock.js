@@ -14,10 +14,13 @@ let vmBlock = new Vue({
             let t = this;
             $.post(api)
                 .done(function (data) {
+
+                    console.log(data);
+
                     t.name = data.name;
                     t.col_num = data.col_num;
                     t.sort = data.sort;
-                    t.private = parseInt(data.private);
+                    t.private = data.private;
                     $('#modalBlock, #modal-overlay').fadeIn('slow');
                 })
                 .fail(function (jsXHR) {
@@ -33,7 +36,7 @@ let vmBlock = new Vue({
                 return;
             }
 
-            $.post(vm.api + 'block/save-block', {
+            $.post(vm.api + 'block/save', {
                 'name': this.name,
                 'col_num': this.col_num,
                 'sort': this.sort,
@@ -41,16 +44,11 @@ let vmBlock = new Vue({
                 'id': this.id,
             })
                 .done(function (data) {
-                    if (data.success) {
-                        vm.loadAdminIndexData();
-                        $('#modalBlock, #modal-overlay').hide();
-                    } else {
-                        console.log(data.exception)
-                        vm.consoleErrorReport(data);
-                    }
+                    vm.loadAdminIndexData();
+                    $('#modalBlock, #modal-overlay').hide();
                 })
                 .fail(function (jqXHR) {
-                    vm.consoleErrorReport(jqXHR.responseJSON);
+                    vmLib.failMsg(save-jqXHR);
                 })
             ;
             event.preventDefault();
@@ -66,28 +64,23 @@ let vmBlock = new Vue({
         },
 
         createBlock: function () {
-            $.post(vm.api + 'block/add-block', {
+            $.post(vm.api + 'block/add', {
                 'name': this.name,
                 'col_num': this.col_num,
                 'sort': this.sort,
                 'private': this.private || 0,
             })
                 .done(function (data) {
-                    if (data.success) {
                         vm.loadAdminIndexData();
 
                         let link = vmEditLink;
-                        link.block_id = data.response;
+                        link.block_id = data.id;
                         link.addLink();
 
                         $('#modalBlock, #modal-overlay').slideUp('slow');
-                    } else {
-                        console.log(data.exception)
-                        vm.consoleErrorReport(data);
-                    }
                 })
                 .fail(function (jqXHR) {
-                    vm.consoleErrorReport(jqXHR.responseJSON);
+                    vmLib.failMsg(jqXHR);
                 })
             ;
         },
