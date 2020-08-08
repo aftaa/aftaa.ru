@@ -33,7 +33,7 @@ $thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
                         <a v-bind:href="link.icon" target="_blank">
                             <img alt="" v-bind:src="link.icon" width="16" height="16">
                         </a>&nbsp;
-                        <a v-bind:href="link.href" target="_blank" v-html="link.name"
+                        <a v-bind:href="link.href" target="_blank" v-html="link.link_name"
                            v-bind:data-id="link.id" v-on:click="conversion"></a>
                     </div>
                 </div>

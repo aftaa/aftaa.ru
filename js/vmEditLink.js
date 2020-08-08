@@ -121,22 +121,16 @@ let vmEditLink = new Vue({
         },
 
         loadFavicon: function (event) {
-            let url = vm.api + 'link/get-favicon';
+            let url = vm.api + 'favicon/import';
             let t = this;
             $.post(url, {name: this.name, origin: this.icon})
                 .done(function (data) {
-                    if (data.success) {
-                        t.icon = data.response;
-                        t.saveLink(event);
-                        vm.loadAdminIndexData();
-                    } else {
-                        console.log(data.exception)
-                        vm.consoleErrorReport(data);
-                    }
-
+                    t.icon = data;
+                    t.saveLink(event);
+                    vm.loadAdminIndexData();
                 })
                 .fail(function (jqXHR) {
-                    vm.consoleErrorReport(jqXHR.responseJSON);
+                    vmLib.failMsg(jqXHR);
                 })
             event.preventDefault();
         }

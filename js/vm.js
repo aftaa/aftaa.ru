@@ -41,13 +41,11 @@ let vm = new Vue({
                 .done(function (response) {
                     t.topColumns = response.data;
                     $.get(t.api + 'data/expert', function (response) {
-                        //if (data.success) {
                         t.columns = response.data;
-                        //}
-                    })/*.fail(function (jqXHR) {
-                            t.seen = false;
-                            t.consoleErrorReport(jqXHR.responseJSON);
-                        })*/
+                    }).fail(function (jqXHR) {
+                        //$('#error').html(jqXHR.responseText)
+                        $
+                    })
                     ;
                 })
                 .fail(function (jqXHR) {
