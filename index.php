@@ -1,17 +1,7 @@
-<?php
-
-require 'config/config.php';
-
-use builder\IndexPageBuilder;
-use entity\IndexPage;
-
-/** IndexPage $thisPage */
-$thisPage = (new IndexPageBuilder(include('config/db_pdo.php')))->build();
-
-?><!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title><?= $thisPage->getTitle() ?></title>
+    <title>Hello, aftaa!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">

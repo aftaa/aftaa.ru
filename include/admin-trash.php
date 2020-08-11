@@ -1,12 +1,9 @@
-
 <div class="container" v-if="trashColumns && seen">
     <hr size="1m">
     <h1><img src="image/recycle.png" width="64" height="64" alt=""> Recycle bin</h1>
-
     <div class="row">
         <div v-for="(column, colNum) in trashColumns">
             <div class="block col-sm-6 col-lg-4" v-bind:class="{ dropped: block.block_deleted }" v-for="(block, blockName) in column">
-
                 <div class="ui-icon ui-icon-key private" style="float: left;" v-if="block.block_private"></div>
                 <h3 class="mt-3">
                     <span v-html="blockName"></span>
@@ -33,7 +30,6 @@
                         </td>
                     </tr>
                 </table>
-
             </div>
         </div>
     </div>

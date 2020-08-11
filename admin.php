@@ -1,16 +1,7 @@
-<?php
-
-
-require 'config/config.php';
-
-use builder\AdminIndexPageBuilder;use builder\IndexPageBuilder;
-
-$thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title><?= $thisPage->getTitle() ?></title>
+    <title>Это админка, детка!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -33,7 +24,7 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 </head>
 <body>
 
-<?php require_once 'include/header.php' ?>
+<?php //require_once 'include/header.php' ?>
 
 <div id="error" class="error"></div>
 
@@ -113,7 +104,6 @@ $thisPage = (new AdminIndexPageBuilder(include('config/db_pdo.php')))->build();
 <script>
     vm.loadAdminIndexData();
     vm.loadAdminTrashData();
-    // vm.blockList();
 </script>
 
 <script>
