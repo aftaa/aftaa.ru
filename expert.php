@@ -18,7 +18,7 @@
     <div class="container" v-if="seen">
         <?php //require 'include/login.php' ?>
         <div class="row">
-            <div class="col col-lg-2 col-sm-3">
+            <div class="col col-sm-12 col-md-6 col-lg-2">
                 <div class="alert-info"
                      style="padding: 0 0 .5em 1em; border-radius: 1em;">
                     <h3 class="mt-3">my top</h3>
@@ -41,7 +41,7 @@
 
 
             <div v-for="(column, colNum) in columns">
-                <div class="block col-sm-6 col-lg-4" v-for="(links, blockName) in column">
+                <div class="block col col-sm-12 col-md-6 col-lg-2" v-for="(links, blockName) in column">
                     <h3 class="mt-3" v-html="blockName"></h3>
                     <div class="mb-1" v-for="link in links">
                         <a v-bind:href="link.icon" target="_blank">
@@ -54,6 +54,7 @@
             </div>
         </div>
     </div>
+    <br><br><br><br>
 </main>
 
 <script src="js/vm.js"></script>
