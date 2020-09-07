@@ -1,4 +1,7 @@
-let vm = new Vue({
+import {vmEditLink} from './vmEditLink.js';
+import {vmBlock} from './vmBlock.js';
+
+export let vm = new Vue({
     el: '#app',
     data: {
         api: 'https://v2.api.aftaa.ru/',
@@ -13,7 +16,7 @@ let vm = new Vue({
         seen: true,
     },
     methods: {
-        conversion: function (event) {
+        conversion(event) {
             let id = event.target.dataset.id;
             $.get('view', {id: id});
         },
@@ -21,7 +24,7 @@ let vm = new Vue({
         /**
          * Get index elements for all.
          */
-        loadIndexData: function () {
+        loadIndexData() {
             let url = this.api + 'data/index';
             $.get(url)
                 .done(function (response) {
@@ -33,7 +36,7 @@ let vm = new Vue({
         /**
          * Get index elements for me.
          */
-        loadExpertData: function () {
+        loadExpertData() {
             let t = this;
 
             // load top columns
@@ -60,7 +63,7 @@ let vm = new Vue({
         /**
          * Get admin index elements.
          */
-        loadAdminIndexData: function (data) {
+        loadAdminIndexData(data) {
             let t = this;
 
             $.get(t.api + 'data/admin', function (response) {
@@ -75,7 +78,7 @@ let vm = new Vue({
         /**
          * Get "deleted" elements.
          */
-        loadAdminTrashData: function () {
+        loadAdminTrashData() {
             let t = this;
 
             $.get(t.api + 'data/admin/trash', function (response) {
@@ -90,7 +93,7 @@ let vm = new Vue({
          * Drop link.
          * @param event
          */
-        unlinkLink: function (event) {
+        unlinkLink(event) {
             vmEditLink.unlink(event.target.dataset.id);
             event.preventDefault();
         },
@@ -99,7 +102,7 @@ let vm = new Vue({
          * Recovery link.
          * @param event
          */
-        recoveryLink: function (event) {
+        recoveryLink(event) {
             vmEditLink.recovery(event.target.dataset.id);
             event.preventDefault();
         },
@@ -108,7 +111,7 @@ let vm = new Vue({
          * Restore block.
          * @param event
          */
-        unlinkBlock: function (event) {
+        unlinkBlock(event) {
             let href = this.api + 'block/remove/' + event.target.dataset.id;
 
             $.post(href, function (data) {
@@ -122,7 +125,7 @@ let vm = new Vue({
          *
          * @param event
          */
-        recoveryBlock: function (event) {
+        recoveryBlock(event) {
             let href = this.api + 'block/restore/' + event.target.dataset.id;
 
             $.post(href, function (data) {
@@ -132,7 +135,7 @@ let vm = new Vue({
             event.preventDefault();
         },
 
-        editLink: function (event) {
+        editLink(event) {
             let t = this;
             let id = event.target.dataset.id;
             $.post(this.api + 'link/' + id)
@@ -146,18 +149,18 @@ let vm = new Vue({
             ;
             event.preventDefault();
         },
-        addLink: function (event) {
+        addLink(event) {
             vmEditLink.addLink(event);
         },
-        addBlock: function (event) {
+        addBlock(event) {
             vmBlock.addBlock(event.target.dataset.colNum);
         },
-        editBlock: function (event) {
+        editBlock(event) {
             let id = event.target.dataset.id;
             vmBlock.load(id);
             event.preventDefault();
         },
-        blockList: function () {
+        blockList() {
             let t = this;
             $.get(this.api + 'block/blocks-list', function (data) {
                 // TODO
@@ -166,7 +169,7 @@ let vm = new Vue({
             });
         },
 
-        consoleErrorReport: function (response) {
+        consoleErrorReport(response) {
 
 
             if (response.exception) {
@@ -189,7 +192,7 @@ let vm = new Vue({
         /**
          * log in
          */
-        login: function () {
+        login() {
         },
     },
 });

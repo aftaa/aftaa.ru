@@ -32,8 +32,8 @@
     </div>
 </main>
 
-<script src="js/vm.js"></script>
-<script>
+<script type="module">
+    import {vm} from '/js/vm.js';
     vm.loadIndexData();
 </script>
 

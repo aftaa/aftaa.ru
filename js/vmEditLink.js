@@ -1,4 +1,7 @@
-let vmEditLink = new Vue({
+import {vm} from "./vm.js";
+import {vmLib} from "./vmLib.js";
+
+export let vmEditLink = new Vue({
     el: '#appEditLink', // include/modal-link.php
     data: {
         'id': null,

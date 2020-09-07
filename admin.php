@@ -97,15 +97,12 @@
 <?php require_once 'include/modal-block.php' ?>
 <div class="modal-overlay" id="modal-overlay"></div>
 
-<script src="js/vm.js"></script>
-<script src="js/vmLib.js"></script>
-<script src="js/vmEditLink.js"></script>
-<script src="js/vmBlock.js"></script>
-<script>
+<script type="module">
+    import {vm} from '/js/vm.js';
+
     vm.loadAdminIndexData();
     vm.loadAdminTrashData();
 </script>
-
 <script>
     $('#modal-overlay').on('click', function () {
         $('.modal, #modal-overlay').fadeOut('slow');

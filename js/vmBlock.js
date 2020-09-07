@@ -1,4 +1,7 @@
-let vmBlock = new Vue({
+import {vm} from "./vm.js";
+import {vmLib} from "./vmLib.js";
+
+export let vmBlock = new Vue({
     'el': '#appBlock',
     'data': {
         id: null,

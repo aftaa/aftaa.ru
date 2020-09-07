@@ -1,4 +1,6 @@
-const vmLib = {
+import {vm} from './vm.js';
+
+export let vmLib = {
     hideModal: function () {
         $('#modalLink, #modal-overlay').fadeOut('slow');
     },
