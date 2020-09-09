@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <title>Hello, aftaa!</title>
@@ -12,7 +12,6 @@
 <body>
 
 <?php //require_once 'include/header.php' ?>
-
 <main id="app">
     <div class="container">
         <div class="row">
