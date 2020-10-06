@@ -1,0 +1,94 @@
+.container {
+  max-width: 168rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Futura New", sans-serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include mob {
+    font-size: 2.2rem;
+  }
+}
+
+.btn {
+  @include button-reset;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  height: 7.4rem;
+  font-family: "Futura New", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0.4rem 1.2rem rgba(#000, 0.3);
+  background-size: 200%;
+  color: #fff;
+  transition: background-position $dur;
+
+  @include mob {
+    height: 3.9rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-position: 100%;
+  }
+
+  &--orange {
+    background-image: linear-gradient(90deg, #FA5900 0%, #FFF44C 100%);
+  }
+
+  &--blue {
+    background-image: linear-gradient(90deg, #1481E0 0%, #69DEFF 100%);
+  }
+
+  &--dashed {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -0.6em;
+      left: -0.6em;
+      right: -0.6em;
+      bottom: -0.6em;
+      border: 0.2rem dashed #fff;
+      border-radius: 3em;
+    }
+  }
+
+  &--play {
+    &::after {
+      content: "";
+      width: 1.7em;
+      height: 0.9em;
+      margin-left: 0.2em;
+      background: url(/static/img/arrows.svg) right / contain no-repeat;
+    }
+  }
+}
+
+.popup {
+  @include overlay(fixed);
+  z-index: 20;
+  @include column;
+
+  @include mob {
+    overflow: auto;
+  }
+}
+
+.popup__overlay {
+  @include overlay(fixed);
+  background-color: #000;
+  opacity: 0.5;
+}

@@ -1,0 +1,102 @@
+.prizes {
+  z-index: 1;
+  margin-bottom: -8.5rem;
+  padding-top: 16rem;
+  padding-bottom: 20rem;
+  text-align: center;
+  background: url(/static/img/prizes-bg.png) top right / 100% no-repeat;
+
+  @include mob {
+    margin-bottom: -5rem;
+    padding-top: 5rem;
+    padding-bottom: 9.5rem;
+    background-image: url(/static/img/prizes-bg-mob.png);
+  }
+}
+
+.prizes__container {
+  max-width: 132rem;
+  margin: 0 auto;
+}
+
+.prizes__title {
+  margin-bottom: 1.5em;
+}
+
+.prizes__row {
+  @include row(space-between, flex-end);
+  margin-left: -4rem;
+
+  @include mob {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+.prizes__item {
+  width: 33.33%;
+
+  &--2 {
+    order: -1;
+
+    img {
+      margin-bottom: -7rem;
+
+      @include mob {
+        margin-bottom: -3.4rem;
+      }
+    }
+  }
+
+  @include mob {
+    width: auto;
+    margin: 0 0 3.4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.prizes__image {
+  margin-bottom: 0.5rem;
+
+  @include mob {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 39.1rem;
+
+    @include mob {
+      width: 25rem;
+    }
+  }
+}
+
+.prizes__text {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include mob {
+    max-width: 21rem;
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-size: 3.6rem;
+    font-weight: 700;
+
+    @include mob {
+      font-size: inherit;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+
+    @include mob {
+      font-size: inherit;
+    }
+  }
+}

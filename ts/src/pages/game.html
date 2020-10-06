@@ -1,0 +1,15 @@
+<extends src="default.html">
+  <block name="head">
+    <link rel="preload" href="/static/img/help-image.png" as="image">
+  </block>
+
+  <block name="content">
+
+    <include src="header/header.html" locals='{
+        "page": "game"
+    }'></include>
+
+    <div id="game"></div>
+
+  </block>
+</extends>

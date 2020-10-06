@@ -4,14 +4,3 @@
         <a href="https://kuba.moscow/" target="_blank" id="kuba-moscow">kuba.moscow</a>
     </div>
 </footer>
-
-
-<div class="system-message">
-    <div class="close ui-icon ui-icon-close"></div>
-    <span class="text"></span>
-</div>
-
-<div class="system-message error">
-    <div class="close ui-icon ui-icon-close"></div>
-    <span class="text"></span>
-</div>

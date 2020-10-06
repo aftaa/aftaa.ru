@@ -1,0 +1,135 @@
+.promo {
+  margin-bottom: -10rem;
+  padding-top: 14.5rem;
+  padding-bottom: 55rem;
+  background-image: linear-gradient(#1777bb, #48d1e2);
+
+  @include mob {
+    margin-bottom: -3.5rem;
+    padding-top: 4.8rem;
+    padding-bottom: 6.5rem;
+  }
+}
+
+.promo__container {
+  max-width: 141rem;
+  margin: 0 auto;
+}
+
+.promo__title {
+  margin-bottom: 1.2em;
+  text-align: center;
+
+  @include mob {
+    margin-bottom: 0.5em;
+  }
+
+  span {
+    @include mob {
+      display: block;
+      padding: 0 2rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.promo__row {
+  @include row(space-between);
+
+  @include mob {
+    display: block;
+    padding-left: 3.2rem;
+    padding-right: 2.3rem;
+  }
+}
+
+.promo__bonus {
+  max-width: 46rem;
+  padding-top: 4rem;
+  list-style: none;
+  font-size: 3.6rem;
+  font-weight: 700;
+
+  @include mob {
+    padding-top: 0;
+    font-size: inherit;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 1.1em;
+
+    @include mob {
+      margin-bottom: 0.2em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.4em;
+      left: -1em;
+      width: 0.4em;
+      height: 0.4em;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+}
+
+.promo__image {
+  position: absolute;
+  left: 0;
+  right: 10rem;
+  bottom: 5rem;
+  width: 115.8rem;
+  margin: 0 auto;
+
+  @include mob {
+    position: static;
+    width: 29.9rem;
+    margin: 0 -1.2rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.promo__tech {
+  max-width: 53rem;
+  padding-left: 2.5rem;
+  list-style: none;
+
+  @include mob {
+    padding-left: 0;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 1.1em;
+    padding-left: 0.4em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1em;
+      width: 1em;
+      height: 1em;
+      background: url(/static/img/check.png) center / contain no-repeat;
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,115 @@
+.header {
+  box-shadow: 0 0.4rem 1.5rem rgba(#000, 0.1);
+  background-color: $bg-color;
+}
+
+.header__container {
+  @include row(space-between);
+}
+
+.header__logo {
+  width: 28.4rem;
+
+  @include mob {
+    width: auto;
+  }
+
+  a {
+    @extend .header__clickable;
+
+    @include mob {
+      padding: 0 1rem;
+    }
+  }
+
+  img {
+    width: 15.2rem;
+
+    @include mob {
+      width: 10rem;
+    }
+  }
+}
+
+.header__nav {
+  font-family: "Futura New", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @include mob {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    background-color: #001E45;
+    visibility: hidden;
+    opacity: 0;
+    transition: $dur;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  ul {
+    @include row;
+    list-style: none;
+
+    @include mob {
+      display: block;
+    }
+  }
+
+  a {
+    @extend .header__clickable;
+    padding: 0 1.2em;
+    text-decoration: none;
+
+    &.active {
+      color: #EB9E29;
+    }
+
+    &.bold {
+      font-weight: 700;
+    }
+
+    @include mob {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.header__reg-btn {
+  @extend .header__clickable;
+  width: 28.4rem;
+  border-radius: 0;
+
+  @include mob {
+    width: 13.7rem;
+    margin-left: auto;
+    font-size: 1rem;
+  }
+}
+
+.header__nav-btn {
+  @extend .header__clickable;
+  @include mobile-only;
+  @include button-reset;
+  width: 4.4rem;
+  background: url(/static/img/burger.svg) center / 2rem no-repeat;
+}
+
+.header__clickable {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+  height: 8.4rem;
+
+  @include mob {
+    height: 4rem;
+  }
+}

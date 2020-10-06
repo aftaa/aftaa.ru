@@ -1,0 +1,22 @@
+@import "~normalize.css";
+@import "fonts";
+@import "~swiper/swiper";
+
+@import "default";
+@import "common";
+@import "animations";
+
+@import "../blocks/pg/pg";
+@import "../blocks/header/header";
+@import "../blocks/intro/intro";
+@import "../blocks/promo/promo";
+@import "../blocks/prizes/prizes";
+@import "../blocks/play/play";
+@import "../blocks/info/info";
+@import "../blocks/footer/footer";
+@import "../blocks/winners/winners";
+
+@import "game/game";
+@import "game/card";
+@import "game/message";
+@import "game/help";
