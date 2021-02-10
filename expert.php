@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+$user = 'root';
+$pass = 'gabi';
+if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    header('WWW-Authenticate: Basic realm="Adminka"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo '<h1>401 Unauthorized</h1>';
+    exit;
+} elseif ($user != $_SERVER['PHP_AUTH_USER'] || $pass != $_SERVER['PHP_AUTH_PW']) {
+    echo '<h1>401 Unauthorized</h1>';
+}
+?><!DOCTYPE html>
 <html lang="ru">
 <head>
     <title>Hello, aftaa!</title>
@@ -21,7 +32,7 @@
             <div class="col col-sm-12 col-md-6 col-lg-2">
                 <div class="alert-info"
                      style="padding: 0 0 .5em 1em; border-radius: 1em;">
-                    <h3 class="mt-3">my top</h3>
+                    <h3 class="mt-3">my <a href="top.php">top</a></h3>
                     <div style="white-space: nowrap;" class="mb-1" v-for="link in topColumns">
                         <a v-bind:href="link.icon" target="_blank">
                             <img alt="" v-bind:src="link.icon" width="16" height="16">

@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+$user = 'root';
+$pass = 'gabi';
+if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    header('WWW-Authenticate: Basic realm="Adminka"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo '<h1>401 Unauthorized</h1>';
+    exit;
+} elseif ($user != $_SERVER['PHP_AUTH_USER'] || $pass != $_SERVER['PHP_AUTH_PW']) {
+    echo '<h1>401 Unauthorized</h1>';
+}
+?><!DOCTYPE html>
 <html lang="ru">
 <head>
     <title>Это админка, детка!</title>

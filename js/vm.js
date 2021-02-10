@@ -18,7 +18,7 @@ export let vm = new Vue({
     methods: {
         conversion(event) {
             let id = event.target.dataset.id;
-            $.get('view', {id: id});
+            $.get(this.api + 'view/' + id);
         },
 
         /**
